@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 350" fill="none">
+  <defs>
+    <linearGradient id="cyanEyeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="100%" stop-color="#00A8B5" />
+    </linearGradient>
+  </defs>
+
+  <!-- Web Line from top -->
+  <path d="M100 0 L100 130" stroke="#E8B7C2" stroke-width="2.5" stroke-dasharray="6,3"/>
+
+  <!-- Upside down Spider Gwen Body & Head -->
+  <g transform="translate(0, 120)">
+    <!-- Legs folded upward -->
+    <path d="M70 40 Q50 0 80 -30 Q100 10 95 35" stroke="#670626" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M130 40 Q150 0 120 -30 Q100 10 105 35" stroke="#670626" stroke-width="8" stroke-linecap="round" fill="none"/>
+    
+    <!-- Torso -->
+    <path d="M80 30 Q100 20 120 30 Q125 70 100 90 Q75 70 80 30 Z" fill="#670626"/>
+
+    <!-- Hood (Upside down head) -->
+    <path d="M100 180 Q145 175 155 125 Q160 80 135 60 Q100 50 65 60 Q40 80 45 125 Q55 175 100 180 Z" fill="#FFFFFF" stroke="#670626" stroke-width="3"/>
+    <path d="M100 170 Q135 165 140 125 Q145 85 125 70 Q100 60 75 70 Q55 85 60 125 Q65 165 100 170 Z" fill="#12090D"/>
+    
+    <!-- Face mask -->
+    <path d="M100 160 Q125 155 130 125 Q135 95 120 80 Q100 70 80 80 Q65 95 70 125 Q75 155 100 160 Z" fill="#FFFFFF"/>
+
+    <!-- Upside down Eyes -->
+    <!-- Left Eye -->
+    <path d="M75 105 Q90 95 95 115 Q85 130 72 120 Z" fill="#670626"/>
+    <path d="M77 107 Q88 98 92 113 Q84 125 74 117 Z" fill="url(#cyanEyeGrad2)"/>
+
+    <!-- Right Eye -->
+    <path d="M125 105 Q110 95 105 115 Q115 130 128 120 Z" fill="#670626"/>
+    <path d="M123 107 Q112 98 108 113 Q116 125 126 117 Z" fill="url(#cyanEyeGrad2)"/>
+  </g>
+</svg>

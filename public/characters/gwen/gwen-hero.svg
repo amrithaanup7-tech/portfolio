@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" fill="none">
+  <defs>
+    <linearGradient id="gwenHoodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F4D3DA" />
+    </linearGradient>
+    <linearGradient id="cherrySuitGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#670626" />
+      <stop offset="100%" stop-color="#360212" />
+    </linearGradient>
+    <linearGradient id="cyanEyeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="100%" stop-color="#00A8B5" />
+    </linearGradient>
+    <filter id="webGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Web background aura -->
+  <g opacity="0.25" stroke="#E8B7C2" stroke-width="1.5">
+    <circle cx="200" cy="200" r="140" stroke-dasharray="4,4"/>
+    <circle cx="200" cy="200" r="90"/>
+    <path d="M200 40 L200 360 M60 200 L340 200 M100 100 L300 300 M100 300 L300 100"/>
+  </g>
+
+  <!-- Hood (Outer) -->
+  <path d="M200 40 Q290 50 310 160 Q330 260 290 320 Q240 360 200 360 Q160 360 110 320 Q70 260 90 160 Q110 50 200 40 Z" fill="url(#gwenHoodGrad)" stroke="#670626" stroke-width="4"/>
+  
+  <!-- Hood Inner Shadows / Pink Lining -->
+  <path d="M120 150 Q200 120 280 150 Q300 240 270 300 Q200 340 130 300 Q100 240 120 150 Z" fill="#670626" opacity="0.95"/>
+  <path d="M135 160 Q200 135 265 160 Q285 235 255 285 Q200 325 145 285 Q115 235 135 160 Z" fill="#12090D"/>
+
+  <!-- Web Pattern inside Hood Inner -->
+  <path d="M200 135 L200 325 M135 220 L265 220 M150 170 L250 270 M150 270 L250 170" stroke="#E8B7C2" stroke-width="1.5" opacity="0.4"/>
+  <path d="M170 190 Q200 200 230 190 Q240 220 230 250 Q200 260 170 250 Q160 220 170 190 Z" stroke="#E8B7C2" stroke-width="1.5" fill="none" opacity="0.4"/>
+
+  <!-- Spider-Gwen Mask / Face contour -->
+  <path d="M145 165 Q200 155 255 165 Q275 225 245 275 Q200 305 155 275 Q125 225 145 165 Z" fill="#FFFFFF"/>
+
+  <!-- Signature Eyes -->
+  <!-- Left Eye -->
+  <path d="M150 200 Q180 185 190 220 Q170 245 150 225 Q140 212 150 200 Z" fill="#670626" stroke="#670626" stroke-width="2"/>
+  <path d="M154 204 Q178 192 185 220 Q168 238 153 222 Q146 213 154 204 Z" fill="url(#cyanEyeGrad)" filter="url(#webGlow)"/>
+
+  <!-- Right Eye -->
+  <path d="M250 200 Q220 185 210 220 Q230 245 250 225 Q260 212 250 200 Z" fill="#670626" stroke="#670626" stroke-width="2"/>
+  <path d="M246 204 Q222 192 215 220 Q232 238 247 222 Q254 213 246 204 Z" fill="url(#cyanEyeGrad)" filter="url(#webGlow)"/>
+
+  <!-- Body / Torso Suits -->
+  <path d="M150 330 Q200 350 250 330 L270 460 Q200 490 130 460 Z" fill="url(#cherrySuitGrad)"/>
+  <!-- Teal / Cyan Web Accents on Shoulders -->
+  <path d="M150 330 L110 370 L140 420 Z" fill="#00A8B5" opacity="0.8"/>
+  <path d="M250 330 L290 370 L260 420 Z" fill="#00A8B5" opacity="0.8"/>
+
+  <!-- Chest Spider Logo -->
+  <path d="M200 350 L212 370 L200 395 L188 370 Z" fill="#E8B7C2"/>
+  <path d="M200 365 L225 355 M200 375 L230 375 M200 385 L220 405" stroke="#E8B7C2" stroke-width="2"/>
+  <path d="M200 365 L175 355 M200 375 L170 375 M200 385 L180 405" stroke="#E8B7C2" stroke-width="2"/>
+</svg>

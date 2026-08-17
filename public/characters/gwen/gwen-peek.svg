@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <linearGradient id="cyanEyeGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="100%" stop-color="#00A8B5" />
+    </linearGradient>
+  </defs>
+
+  <!-- Gwen peeking head & hands -->
+  <g transform="translate(10, 10)">
+    <!-- Hood -->
+    <path d="M70 20 Q120 15 130 65 Q135 110 110 130 Q80 145 50 135 Q20 120 25 70 Q30 25 70 20 Z" fill="#FFFFFF" stroke="#670626" stroke-width="3"/>
+    <path d="M70 30 Q105 25 115 65 Q120 100 100 115 Q75 130 50 120 Q30 105 35 65 Q40 30 70 30 Z" fill="#12090D"/>
+    
+    <!-- Mask -->
+    <path d="M70 40 Q95 38 105 70 Q110 95 95 105 Q75 115 55 108 Q40 95 45 70 Q50 42 70 40 Z" fill="#FFFFFF"/>
+
+    <!-- Eyes -->
+    <path d="M52 60 Q70 50 73 72 Q60 85 48 76 Z" fill="url(#cyanEyeGrad3)" stroke="#670626" stroke-width="2"/>
+    <path d="M88 60 Q70 50 67 72 Q80 85 92 76 Z" fill="url(#cyanEyeGrad3)" stroke="#670626" stroke-width="2"/>
+
+    <!-- Hands gripping edge -->
+    <ellipse cx="25" cy="115" rx="10" ry="6" fill="#FFFFFF" stroke="#670626" stroke-width="2"/>
+    <ellipse cx="115" cy="115" rx="10" ry="6" fill="#FFFFFF" stroke="#670626" stroke-width="2"/>
+  </g>
+</svg>
