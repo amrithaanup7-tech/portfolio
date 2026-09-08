@@ -88,7 +88,7 @@ export const GwenReveal: React.FC = () => {
             <img
               src={PROFILE.images.heroPortrait}
               alt="Amritha - Real Portrait"
-              className="w-full h-full object-cover object-[center_12%] filter brightness-[1.02] contrast-[1.03]"
+              className="w-full h-full object-cover object-[48%_20%] filter brightness-[1.02] contrast-[1.03]"
             />
 
             {/* Subtle bottom gradient for readable label */}

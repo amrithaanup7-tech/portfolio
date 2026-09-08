@@ -56,6 +56,281 @@ export interface ArticleItem {
   snippet: string;
 }
 
+export interface BuildLinkData {
+  id: string;
+  name: string;
+  tagline: string;
+  status: string;
+  conciseOverview: string;
+  fullOverview: string;
+  image: string;
+  marketStats: {
+    stat: string;
+    label: string;
+    sublabel: string;
+  }[];
+  problems: {
+    title: string;
+    detail: string;
+  }[];
+  marketGaps: {
+    method: string;
+    flaw: string;
+  }[];
+  solutionHighlights: {
+    title: string;
+    detail: string;
+  }[];
+  workflowSteps: {
+    step: string;
+    title: string;
+    description: string;
+  }[];
+  equipmentCategories: string[];
+  aiFeatures: {
+    name: string;
+    purpose: string;
+    badge: string;
+  }[];
+  keyFeatures: string[];
+  businessModel: {
+    stream: string;
+    detail: string;
+  }[];
+  competitiveAdvantages: string[];
+  targetUsers: {
+    group: string;
+    users: string[];
+  }[];
+  expansionPhases: {
+    phase: string;
+    region: string;
+    locations: string;
+  }[];
+  go_to_market_strategy: string;
+  projectOutcomeVision: string;
+}
+
+export const BUILDLINK_DATA: BuildLinkData = {
+  id: "buildlink",
+  name: "BuildLink",
+  tagline: "AI-Powered Construction Equipment Rental Marketplace",
+  status: "PRODUCT CASE STUDY",
+  conciseOverview: "An AI-powered construction equipment rental marketplace connecting contractors with verified equipment owners through location-based discovery, transparent pricing, digital booking, and intelligent equipment matching.",
+  fullOverview: "BuildLink is a digital marketplace designed to simplify construction equipment rental by directly connecting equipment owners with contractors, builders, and engineers. The platform addresses traditional rental challenges—phone calls, brokers, hidden fees, unverified machine availability, and costly downtime—by providing a centralized digital experience for discovery, transparent pricing, verified listings, digital contracts, and logistics.",
+  image: "/assets/buildlink-marketplace.jpg",
+  marketStats: [
+    {
+      stat: "₹75 Lakh Cr",
+      label: "Global Market",
+      sublabel: "Construction equipment rental market by 2027"
+    },
+    {
+      stat: "60%",
+      label: "Prefer Renting",
+      sublabel: "Contractors choose rental over ownership"
+    },
+    {
+      stat: "18%",
+      label: "Annual Growth",
+      sublabel: "CAGR in emerging infrastructure markets"
+    },
+    {
+      stat: "₹10 Lakh Cr",
+      label: "India Opportunity",
+      sublabel: "India's construction equipment market"
+    }
+  ],
+  problems: [
+    {
+      title: "Phone Calls & Brokers",
+      detail: "Hours wasted on manual outreach with middleman brokers and unorganized communication."
+    },
+    {
+      title: "No Transparent Pricing",
+      detail: "Hidden or unclear rental fees with no reliable rate comparison across providers."
+    },
+    {
+      title: "Unverified Availability",
+      detail: "Machines often unavailable when contractors arrive on site, stalling project schedules."
+    },
+    {
+      title: "Project Delays & Losses",
+      detail: "Equipment downtime and unavailability cost contractors thousands of rupees per day."
+    }
+  ],
+  marketGaps: [
+    {
+      method: "Local Brokers",
+      flaw: "High brokerage fees with no accountability or guarantees"
+    },
+    {
+      method: "Personal Contacts",
+      flaw: "Limited geographic reach and highly unreliable availability"
+    },
+    {
+      method: "WhatsApp Groups",
+      flaw: "No verification, unorganized discussions, and chaotic coordination"
+    },
+    {
+      method: "Traditional Rental Agencies",
+      flaw: "Rigid pricing models and slow, paperwork-heavy processes"
+    }
+  ],
+  solutionHighlights: [
+    {
+      title: "Search Nearby",
+      detail: "Find construction equipment based on exact site requirements and geographic location."
+    },
+    {
+      title: "Compare Prices",
+      detail: "Instantly view transparent daily and project rental rates with zero hidden fees."
+    },
+    {
+      title: "Verified Owners",
+      detail: "Browse trusted, rated equipment owners and verified machine listings."
+    },
+    {
+      title: "Book Instantly",
+      detail: "Complete digital contracts, online payments, and site delivery arrangements seamlessly."
+    }
+  ],
+  workflowSteps: [
+    {
+      step: "01",
+      title: "Search & Filter",
+      description: "Users find construction equipment based on their requirements and location."
+    },
+    {
+      step: "02",
+      title: "List Equipment",
+      description: "Equipment owners can list their available machinery on the marketplace."
+    },
+    {
+      step: "03",
+      title: "Book & Pay",
+      description: "Contractors can select equipment and complete the rental process digitally."
+    },
+    {
+      step: "04",
+      title: "Deliver to Site",
+      description: "The equipment is transported directly to the required construction site."
+    }
+  ],
+  equipmentCategories: [
+    "Excavators & Backhoes",
+    "Cranes & Bulldozers",
+    "Road Rollers & Pavers",
+    "Mixers & Dump Trucks",
+    "Forklifts"
+  ],
+  aiFeatures: [
+    {
+      name: "AI Matching",
+      purpose: "Helps identify the nearest available machines based on user requirements.",
+      badge: "PROPOSED AI CAPABILITY"
+    },
+    {
+      name: "Price Optimization",
+      purpose: "Helps determine competitive rental rates across demand zones.",
+      badge: "PROPOSED AI CAPABILITY"
+    },
+    {
+      name: "Demand Forecasting",
+      purpose: "Predicts potential equipment requirements and upcoming project demand.",
+      badge: "PROPOSED AI CAPABILITY"
+    },
+    {
+      name: "Route Optimization",
+      purpose: "Helps minimize transportation distance and logistics costs for machinery dispatch.",
+      badge: "PROPOSED AI CAPABILITY"
+    }
+  ],
+  keyFeatures: [
+    "Location-based equipment discovery",
+    "Equipment search and filtering",
+    "Transparent upfront pricing",
+    "Verified owner listings",
+    "Real-time equipment availability",
+    "Digital booking workflow",
+    "Digital contracts & e-signatures",
+    "Online secure payments",
+    "Equipment transportation & logistics",
+    "AI-powered recommendations",
+    "Price optimization engine",
+    "Demand forecasting analytics",
+    "Route optimization for dispatch"
+  ],
+  businessModel: [
+    {
+      stream: "Booking Commission",
+      detail: "10–15% commission fee per completed equipment rental transaction."
+    },
+    {
+      stream: "Premium Listings",
+      detail: "Featured placement and priority visibility for top equipment owners."
+    },
+    {
+      stream: "Monthly Subscriptions",
+      detail: "Tiered monthly plans for commercial rental companies and fleet operators."
+    },
+    {
+      stream: "Transportation Logistics",
+      detail: "Commission on machinery delivery and logistics partner bookings."
+    },
+    {
+      stream: "Insurance Partnerships",
+      detail: "Partnership and referral fees for machine and equipment damage protection."
+    }
+  ],
+  competitiveAdvantages: [
+    "Real-time equipment availability tracking",
+    "Transparent upfront pricing with zero hidden charges",
+    "Verified equipment-owner trusted network",
+    "Digital contracts and streamlined online payments",
+    "AI-powered recommendations & matching",
+    "Faster equipment discovery and project execution"
+  ],
+  targetUsers: [
+    {
+      group: "Primary Target (Renters)",
+      users: [
+        "Contractors",
+        "Builders",
+        "Civil Engineers",
+        "Infrastructure Companies"
+      ]
+    },
+    {
+      group: "Secondary Target (Suppliers)",
+      users: [
+        "Equipment Owners",
+        "Rental Companies",
+        "Fleet Operators"
+      ]
+    }
+  ],
+  expansionPhases: [
+    {
+      phase: "Phase 1 — Kerala",
+      region: "Launch Region",
+      locations: "Kochi · Trivandrum · Calicut"
+    },
+    {
+      phase: "Phase 2 — South India",
+      region: "Regional Expansion",
+      locations: "Karnataka · Tamil Nadu · Telangana"
+    },
+    {
+      phase: "Phase 3 — National",
+      region: "Pan-India Scale",
+      locations: "Pan-India National Marketplace"
+    }
+  ],
+  go_to_market_strategy: "Customer acquisition via contractor partnerships, construction associations, and equipment owner onboarding campaigns.",
+  projectOutcomeVision: "Transforming construction equipment rental from fragmented manual phone calls into a unified, transparent, and intelligent digital ecosystem across India."
+};
+
 export const PROFILE = {
   name: "AMRITHA",
   headline: "AI INTERN × PYTHON LEARNER × BUILDER",
@@ -86,21 +361,7 @@ export const PROFILE = {
     webSketch: "/textures/hand-web-sketch.jpg"
   },
 
-  featuredWork: {
-    id: "buildlink",
-    name: "BUILDLINK",
-    subtitle: "A resource platform built for early-stage tech creators",
-    status: "IN PROGRESS" as const,
-    problem: "Navigating tech toolkits, learning resources, and development links is often fragmented and overwhelming for early builders.",
-    idea: "A clean, structured platform to organize, curate, and share essential building blocks for projects.",
-    whatIBuilt: "Interactive web dashboard interface prototype integrated with Python-backed link categorization logic.",
-    role: "Creator & Developer",
-    technologies: ["Python", "HTML/CSS", "JavaScript", "Data Structures"],
-    whatILearned: "Structuring clean Python data handlers, state management, and user interface composition.",
-    image: "/assets/buildlink-mockup.jpg",
-    githubUrl: "https://github.com/amrithaanup7",
-    liveUrl: "#"
-  },
+  featuredWork: BUILDLINK_DATA,
 
   labItems: [
     {
