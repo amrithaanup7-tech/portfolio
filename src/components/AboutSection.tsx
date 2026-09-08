@@ -13,6 +13,17 @@ export const AboutSection: React.FC = () => {
     >
       <WebDecoration position="top-right" opacity={0.2} />
 
+      {/* Spider-Gwen hanging upside-down from section ceiling */}
+      <motion.div
+        initial={{ y: -100, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        viewport={{ once: false, margin: "-50px" }}
+        transition={{ type: 'spring', stiffness: 120, damping: 14 }}
+        className="absolute top-0 right-4 sm:right-8 md:right-16 w-20 sm:w-24 md:w-28 pointer-events-auto z-20"
+      >
+        <GwenCharacter pose="hanging" interactive={true} />
+      </motion.div>
+
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
         {/* Left Column — Editorial Developer Identity & Credentials Card (No personal photo) */}
         <motion.div
@@ -97,19 +108,8 @@ export const AboutSection: React.FC = () => {
           </div>
         </motion.div>
 
-        {/* Right Column — Editorial About Text & Hanging Gwen */}
+        {/* Right Column — Editorial About Text */}
         <div className="lg:col-span-7 flex flex-col gap-8 relative">
-          {/* Spider-Gwen hanging upside-down */}
-          <motion.div
-            initial={{ y: -120, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: false, margin: "-100px" }}
-            transition={{ type: 'spring', stiffness: 120, damping: 14 }}
-            className="hidden lg:block absolute -top-24 right-0 lg:-right-4 w-24 md:w-32 pointer-events-auto z-20"
-          >
-            <GwenCharacter pose="hanging" interactive={true} />
-          </motion.div>
-
           {/* Heading */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
