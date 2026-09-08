@@ -39,10 +39,10 @@ export const HeroSection: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
           >
-            <h1 className="text-7xl md:text-9xl lg:text-[10rem] font-display font-extrabold text-cherry dark:text-cream leading-[0.85] tracking-tighter">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] xl:text-[5.4rem] 2xl:text-[6.6rem] font-display font-extrabold text-cherry dark:text-cream leading-[0.9] tracking-tight">
               AMRITHA
             </h1>
-            <p className="font-serif italic text-2xl md:text-4xl text-cherry/80 dark:text-blush mt-2">
+            <p className="font-serif italic text-xl sm:text-2xl md:text-3xl text-cherry/80 dark:text-blush mt-3">
               AI Intern <span className="font-sans not-italic text-sm opacity-50 px-1">×</span> Python Learner <span className="font-sans not-italic text-sm opacity-50 px-1">×</span> Builder
             </p>
           </motion.div>

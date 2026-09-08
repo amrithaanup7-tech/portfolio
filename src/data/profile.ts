@@ -97,7 +97,7 @@ export const PROFILE = {
     role: "Creator & Developer",
     technologies: ["Python", "HTML/CSS", "JavaScript", "Data Structures"],
     whatILearned: "Structuring clean Python data handlers, state management, and user interface composition.",
-    image: "/assets/amritha-presentation.png",
+    image: "/assets/buildlink-mockup.jpg",
     githubUrl: "https://github.com/amrithaanup7",
     liveUrl: "#"
   },

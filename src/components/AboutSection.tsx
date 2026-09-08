@@ -21,23 +21,20 @@ export const AboutSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="lg:col-span-5 relative"
         >
-          <div className="relative rounded-3xl overflow-hidden border-2 border-cherry/20 dark:border-blush/20 shadow-2xl bg-nearblack group">
+          <div className="relative rounded-3xl overflow-hidden border-2 border-cherry/20 dark:border-blush/20 shadow-2xl bg-cream-card dark:bg-nearblack-card group">
             <img
               src={PROFILE.images.presentation}
               alt="Amritha presenting at EXCAPE.AI"
-              className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 filter contrast-[1.03]"
+              className="w-full h-auto object-cover group-hover:scale-102 transition-transform duration-500 rounded-3xl"
             />
-            {/* Halftone & Blush Accent Layer */}
-            <div className="absolute inset-0 bg-gradient-to-t from-cherry/80 via-transparent to-transparent opacity-60 pointer-events-none" />
-            <div className="absolute inset-0 paper-grain opacity-30 pointer-events-none" />
 
-            <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-cream/95 dark:bg-nearblack/95 backdrop-blur-md border border-cherry/20 dark:border-blush/20 flex items-center justify-between">
+            <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-cream/95 dark:bg-nearblack/95 backdrop-blur-md border border-cherry/20 dark:border-blush/20 flex items-center justify-between shadow-lg">
               <div>
                 <p className="text-xs font-mono font-bold text-cherry dark:text-blush">AMRITHA ANUP</p>
                 <p className="text-[11px] font-mono text-nearblack/70 dark:text-cream/70">AI Intern @ EXCAPE.AI</p>
               </div>
               <span className="px-2.5 py-1 rounded-full text-[10px] font-mono bg-blush text-cherry font-bold">
-                BUILDING
+                PRESENTING
               </span>
             </div>
           </div>
@@ -45,13 +42,13 @@ export const AboutSection: React.FC = () => {
 
         {/* Right Column — Editorial About Text & Hanging Gwen */}
         <div className="lg:col-span-7 flex flex-col gap-8 relative">
-          {/* Requirement #13: Spider-Gwen hanging upside-down from heading */}
+          {/* Spider-Gwen hanging upside-down */}
           <motion.div
             initial={{ y: -120, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: false, margin: "-100px" }}
             transition={{ type: 'spring', stiffness: 120, damping: 14 }}
-            className="absolute -top-24 right-4 md:right-12 w-28 md:w-36 pointer-events-auto z-20"
+            className="hidden lg:block absolute -top-24 right-0 lg:-right-4 w-24 md:w-32 pointer-events-auto z-20"
           >
             <GwenCharacter pose="hanging" interactive={true} />
           </motion.div>
