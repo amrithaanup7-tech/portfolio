@@ -109,9 +109,6 @@ export const GwenReveal: React.FC = () => {
               <p className="font-display font-extrabold text-2xl sm:text-3xl tracking-tight text-white">
                 Amritha Anup
               </p>
-              <p className="text-sm font-mono text-blush font-semibold">
-                AI Developer Intern @ EXCAPE.AI
-              </p>
             </div>
           </motion.div>
         )}

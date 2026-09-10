@@ -159,23 +159,6 @@ export const FeaturedWork: React.FC = () => {
               </div>
             </div>
           </div>
-
-          {/* Bottom Sleek Metric Strip */}
-          <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-3 pt-4 border-t border-blush/15 text-center">
-            {project.marketStats.map((item) => (
-              <div
-                key={item.label}
-                className="p-3.5 rounded-xl bg-nearblack-surface/90 border border-cherry/30 flex flex-col items-center justify-center"
-              >
-                <span className="text-xl sm:text-2xl font-display font-extrabold text-blush">
-                  {item.stat}
-                </span>
-                <span className="text-xs sm:text-sm font-mono font-semibold text-cream mt-0.5">
-                  {item.label}
-                </span>
-              </div>
-            ))}
-          </div>
         </motion.div>
 
       </div>

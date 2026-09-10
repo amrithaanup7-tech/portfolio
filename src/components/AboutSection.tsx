@@ -60,9 +60,6 @@ export const AboutSection: React.FC = () => {
                 <h3 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
                   Amritha Anup
                 </h3>
-                <p className="text-base font-mono text-blush mt-1 font-medium">
-                  AI Developer Intern @ EXCAPE.AI
-                </p>
               </div>
 
               {/* Credential Grid Cards */}

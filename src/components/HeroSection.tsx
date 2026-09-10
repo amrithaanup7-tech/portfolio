@@ -52,22 +52,11 @@ export const HeroSection: React.FC = () => {
             </p>
           </motion.div>
 
-          {/* Subtext Company Reference */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex items-center gap-3 text-sm sm:text-base font-mono tracking-wider text-nearblack/85 dark:text-cream/85 font-medium"
-          >
-            <span className="w-2.5 h-2.5 rounded-full bg-cherry dark:bg-blush" />
-            <span>{PROFILE.companySubtext}</span>
-          </motion.div>
-
           {/* Hero Tagline */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="text-xl sm:text-2xl text-nearblack dark:text-cream max-w-xl font-normal leading-relaxed"
           >
             "{PROFILE.heroDescription}"
