@@ -58,21 +58,21 @@ export const ContactSection: React.FC = () => {
       <div className="max-w-7xl mx-auto flex flex-col gap-16 relative z-10">
         {/* Section Header with Gwen Swing Entrance */}
         <div className="relative">
-          {/* Spider-Gwen swinging all the way across the finale to the far right */}
+          {/* Spider-Gwen swinging in from the left and landing at the end of the line */}
           <motion.div
-            initial={{ x: '-180px', y: -40, rotate: 25, opacity: 0 }}
+            initial={{ x: '-90vw', y: -80, rotate: 35, opacity: 0 }}
             whileInView={{ 
-              x: ['-180px', '45vw', '110vw'], 
-              y: [-40, 25, -60], 
-              rotate: [25, 0, -25],
-              opacity: [0, 1, 1, 0]
+              x: ['-90vw', '-25vw', '0px'], 
+              y: [-80, 40, 0], 
+              rotate: [35, -20, 0],
+              opacity: [0, 1, 1]
             }}
             viewport={{ once: true }}
-            transition={{ duration: 2.0, ease: 'easeInOut' }}
+            transition={{ duration: 1.4, ease: [0.25, 1, 0.5, 1] }}
             onAnimationStart={() => soundFx.playSwing()}
-            className="absolute -top-12 left-0 w-28 md:w-36 pointer-events-none z-20"
+            className="absolute -top-16 sm:-top-20 md:-top-24 right-2 sm:right-6 md:right-12 w-24 sm:w-28 md:w-36 pointer-events-auto z-20"
           >
-            <GwenCharacter pose="hero" interactive={false} />
+            <GwenCharacter pose="hero" interactive={true} />
           </motion.div>
 
           <motion.div
