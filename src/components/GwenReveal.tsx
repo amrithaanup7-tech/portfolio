@@ -50,9 +50,9 @@ export const GwenReveal: React.FC = () => {
             className="absolute inset-0 p-8 flex flex-col items-center justify-between z-10 bg-nearblack"
           >
             {/* Top Badge */}
-            <div className="w-full flex items-center justify-between text-xs font-mono text-blush/80">
+            <div className="w-full flex items-center justify-between text-sm font-mono text-blush font-semibold">
               <span className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-blush animate-pulse" />
+                <span className="w-2.5 h-2.5 rounded-full bg-blush animate-pulse" />
                 CHARACTER LAYER
               </span>
               <span>01 / IDENTITY</span>
@@ -65,11 +65,11 @@ export const GwenReveal: React.FC = () => {
             </div>
 
             {/* Bottom Reveal Instruction */}
-            <div className="w-full text-center py-2.5 px-4 rounded-full border border-blush/30 bg-cherry/80 backdrop-blur-sm text-cream font-mono text-xs tracking-widest uppercase flex items-center justify-center gap-2 group-hover:scale-105 transition-transform">
-              <span className="w-1.5 h-1.5 rounded-full bg-blush" />
+            <div className="w-full text-center py-3 px-5 rounded-full border border-blush/30 bg-cherry/90 backdrop-blur-sm text-cream font-mono text-xs sm:text-sm font-bold tracking-wider uppercase flex items-center justify-center gap-2 group-hover:scale-105 transition-transform">
+              <span className="w-2 h-2 rounded-full bg-blush" />
               <span className="hidden md:inline">HOVER OR TAP TO REVEAL AMRITHA</span>
               <span className="inline md:hidden">TAP TO REVEAL AMRITHA</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-blush" />
+              <span className="w-2 h-2 rounded-full bg-blush" />
             </div>
           </motion.div>
         )}
@@ -102,14 +102,14 @@ export const GwenReveal: React.FC = () => {
 
             {/* Bottom Label Card */}
             <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-1 text-cream">
-              <div className="flex items-center justify-between text-[11px] font-mono text-blush tracking-widest">
+              <div className="flex items-center justify-between text-xs sm:text-sm font-mono text-blush tracking-wider font-bold">
                 <span>REAL PORTRAIT</span>
                 <span>AMRITHA</span>
               </div>
-              <p className="font-display font-extrabold text-2xl tracking-tight text-white">
+              <p className="font-display font-extrabold text-2xl sm:text-3xl tracking-tight text-white">
                 Amritha Anup
               </p>
-              <p className="text-xs font-mono text-blush/90">
+              <p className="text-sm font-mono text-blush font-semibold">
                 AI Intern @ EXCAPE.AI
               </p>
             </div>

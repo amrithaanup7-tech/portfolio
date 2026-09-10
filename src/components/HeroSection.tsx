@@ -27,9 +27,9 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-cherry/20 dark:border-blush/20 bg-cream-card dark:bg-nearblack-card text-cherry dark:text-blush font-mono text-xs w-max"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cherry/20 dark:border-blush/20 bg-cream-card dark:bg-nearblack-card text-cherry dark:text-blush font-mono text-sm font-semibold w-max"
           >
-            <Sparkles className="w-3.5 h-3.5 text-cherry dark:text-blush animate-spin" />
+            <Sparkles className="w-4 h-4 text-cherry dark:text-blush animate-spin" />
             <span>STATUS: LEARNING & BUILDING</span>
           </motion.div>
 
@@ -42,8 +42,8 @@ export const HeroSection: React.FC = () => {
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[4.2rem] xl:text-[5.4rem] 2xl:text-[6.6rem] font-display font-extrabold text-cherry dark:text-cream leading-[0.9] tracking-tight">
               AMRITHA
             </h1>
-            <p className="font-serif italic text-xl sm:text-2xl md:text-3xl text-cherry/80 dark:text-blush mt-3">
-              AI Intern <span className="font-sans not-italic text-sm opacity-50 px-1">×</span> Python Learner <span className="font-sans not-italic text-sm opacity-50 px-1">×</span> Builder
+            <p className="font-serif italic text-2xl sm:text-3xl md:text-4xl text-cherry/90 dark:text-blush mt-3">
+              AI Intern <span className="font-sans not-italic text-base opacity-60 px-1.5">×</span> Python Learner <span className="font-sans not-italic text-base opacity-60 px-1.5">×</span> Builder
             </p>
           </motion.div>
 
@@ -52,9 +52,9 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex items-center gap-3 text-xs font-mono tracking-widest text-nearblack/70 dark:text-cream/70"
+            className="flex items-center gap-3 text-sm sm:text-base font-mono tracking-wider text-nearblack/85 dark:text-cream/85 font-medium"
           >
-            <span className="w-2 h-2 rounded-full bg-cherry dark:bg-blush" />
+            <span className="w-2.5 h-2.5 rounded-full bg-cherry dark:bg-blush" />
             <span>{PROFILE.companySubtext}</span>
           </motion.div>
 
@@ -63,7 +63,7 @@ export const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg md:text-xl text-nearblack/90 dark:text-cream/90 max-w-xl font-light leading-relaxed"
+            className="text-xl sm:text-2xl text-nearblack dark:text-cream max-w-xl font-normal leading-relaxed"
           >
             "{PROFILE.heroDescription}"
           </motion.p>
@@ -77,7 +77,7 @@ export const HeroSection: React.FC = () => {
           >
             <button
               onClick={() => handleScrollTo('#work')}
-              className="flex items-center gap-3 px-7 py-4 rounded-full bg-cherry dark:bg-blush text-cream dark:text-nearblack font-mono font-bold text-xs tracking-wider uppercase hover:scale-105 transition-all duration-300 shadow-lg group"
+              className="flex items-center gap-3 px-8 py-4 rounded-full bg-cherry dark:bg-blush text-cream dark:text-nearblack font-mono font-bold text-sm tracking-wider uppercase hover:scale-105 transition-all duration-300 shadow-lg group"
               data-cursor="WORK ↘"
             >
               <span>EXPLORE MY WORK</span>
@@ -86,7 +86,7 @@ export const HeroSection: React.FC = () => {
 
             <button
               onClick={() => handleScrollTo('#about')}
-              className="flex items-center gap-2 px-7 py-4 rounded-full border border-cherry/30 dark:border-blush/30 text-cherry dark:text-blush font-mono font-semibold text-xs tracking-wider uppercase hover:bg-cherry/5 dark:hover:bg-blush/5 transition-all"
+              className="flex items-center gap-2 px-8 py-4 rounded-full border border-cherry/30 dark:border-blush/30 text-cherry dark:text-blush font-mono font-bold text-sm tracking-wider uppercase hover:bg-cherry/5 dark:hover:bg-blush/5 transition-all"
               data-cursor="ABOUT ↗"
             >
               <span>ABOUT ME</span>

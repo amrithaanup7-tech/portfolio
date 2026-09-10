@@ -44,34 +44,34 @@ export const ExperienceJourney: React.FC = () => {
           >
             <div className="flex flex-col gap-4">
               <div className="flex items-center justify-between">
-                <span className="px-3.5 py-1 rounded-full text-xs font-mono font-bold bg-blush text-cherry flex items-center gap-1.5">
-                  <Briefcase className="w-3.5 h-3.5" />
+                <span className="px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-mono font-bold bg-blush text-cherry flex items-center gap-1.5">
+                  <Briefcase className="w-4 h-4" />
                   {experience.status}
                 </span>
-                <span className="text-xs font-mono text-blush/80">{experience.period}</span>
+                <span className="text-sm font-mono text-blush font-semibold">{experience.period}</span>
               </div>
 
               <div>
                 <h3 className="text-3xl md:text-4xl font-display font-extrabold text-white">
                   {experience.role}
                 </h3>
-                <p className="text-lg font-serif italic text-blush font-normal">
+                <p className="text-xl font-serif italic text-blush font-normal">
                   {experience.company}
                 </p>
               </div>
 
-              <p className="text-sm font-light text-cream/90 leading-relaxed border-t border-blush/20 pt-4">
+              <p className="text-base sm:text-lg text-cream leading-relaxed border-t border-blush/20 pt-4 font-normal">
                 {experience.description}
               </p>
 
               <div className="flex flex-col gap-2 pt-2">
-                <span className="text-[11px] font-mono tracking-widest text-blush font-bold uppercase">
+                <span className="text-xs font-mono tracking-widest text-blush font-bold uppercase">
                   PRACTICAL EXPOSURE & RESPONSIBILITIES:
                 </span>
-                <ul className="flex flex-col gap-1.5 text-xs text-cream/90 font-light">
+                <ul className="flex flex-col gap-2 text-sm sm:text-base text-cream font-normal">
                   {experience.learnings.map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <Sparkles className="w-3.5 h-3.5 text-blush shrink-0 mt-0.5" />
+                      <Sparkles className="w-4 h-4 text-blush shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -79,7 +79,7 @@ export const ExperienceJourney: React.FC = () => {
               </div>
             </div>
 
-            <div className="pt-6 text-[11px] font-mono text-blush/60 flex items-center justify-between border-t border-blush/20 mt-6">
+            <div className="pt-6 text-xs font-mono text-blush/80 font-semibold flex items-center justify-between border-t border-blush/20 mt-6">
               <span>TITLE FACTUAL: AI INTERN</span>
               <span>EXCAPE.AI</span>
             </div>
@@ -95,30 +95,30 @@ export const ExperienceJourney: React.FC = () => {
           >
             <div className="flex flex-col gap-4">
               <div className="flex items-center justify-between">
-                <span className="px-3.5 py-1 rounded-full text-xs font-mono font-bold border border-cherry/30 dark:border-blush/30 bg-cherry/5 dark:bg-blush/5 text-cherry dark:text-blush flex items-center gap-1.5">
-                  <GraduationCap className="w-3.5 h-3.5" />
+                <span className="px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-mono font-bold border border-cherry/30 dark:border-blush/30 bg-cherry/5 dark:bg-blush/5 text-cherry dark:text-blush flex items-center gap-1.5">
+                  <GraduationCap className="w-4 h-4" />
                   DEGREE
                 </span>
-                <span className="text-xs font-mono text-cherry/70 dark:text-blush/70">{education.year}</span>
+                <span className="text-sm font-mono text-cherry/80 dark:text-blush/80 font-semibold">{education.year}</span>
               </div>
 
               <div>
                 <h3 className="text-2xl md:text-3xl font-display font-extrabold text-cherry dark:text-cream">
                   {education.degree}
                 </h3>
-                <p className="text-base font-serif italic text-cherry/80 dark:text-blush mt-1">
+                <p className="text-lg font-serif italic text-cherry/90 dark:text-blush mt-1">
                   {education.institution}
                 </p>
               </div>
 
-              <p className="text-xs font-light text-nearblack/80 dark:text-cream/80 leading-relaxed border-t border-cherry/10 dark:border-blush/10 pt-4">
+              <p className="text-base text-nearblack dark:text-cream leading-relaxed border-t border-cherry/10 dark:border-blush/10 pt-4 font-normal">
                 {education.note}
               </p>
             </div>
 
             {/* Spider Gwen Sitting Accent */}
             <div className="relative pt-6 flex items-center justify-between">
-              <span className="text-[11px] font-mono text-cherry/60 dark:text-blush/60">
+              <span className="text-xs font-mono text-cherry/80 dark:text-blush/80 font-semibold">
                 GRADUATE ACADEMIC FOUNDATION
               </span>
               <div className="w-16 h-16">
@@ -130,7 +130,7 @@ export const ExperienceJourney: React.FC = () => {
 
         {/* Connected Journey Visual Flow */}
         <div className="pt-8 border-t border-cherry/10 dark:border-blush/10">
-          <span className="text-xs font-mono tracking-widest text-cherry dark:text-blush uppercase block mb-6 text-center">
+          <span className="text-sm font-mono font-bold tracking-widest text-cherry dark:text-blush uppercase block mb-6 text-center">
             THE TIMELINE OF GROWTH
           </span>
 
@@ -152,10 +152,10 @@ export const ExperienceJourney: React.FC = () => {
                     <ArrowRight className="w-4 h-4 text-cherry/40 dark:text-blush/40 hidden lg:block" />
                   )}
                 </div>
-                <p className="font-display font-bold text-base text-cherry dark:text-cream">
+                <p className="font-display font-bold text-lg text-cherry dark:text-cream">
                   {step.label}
                 </p>
-                <p className="text-xs font-mono text-nearblack/70 dark:text-cream/70">
+                <p className="text-sm font-mono text-nearblack/80 dark:text-cream/80 font-medium">
                   {step.detail}
                 </p>
               </motion.div>

@@ -101,7 +101,7 @@ export const ContactSection: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="flex flex-col gap-4"
           >
-            <span className="text-xs font-mono tracking-widest text-blush uppercase">
+            <span className="text-sm font-mono font-semibold tracking-widest text-blush uppercase">
               07 / LET'S CONNECT
             </span>
             
@@ -127,7 +127,7 @@ export const ContactSection: React.FC = () => {
               </span>
             </h2>
 
-            <p className="text-base md:text-xl font-light text-cream/80 max-w-2xl mt-4">
+            <p className="text-xl sm:text-2xl font-normal text-cream max-w-2xl mt-4 leading-relaxed">
               Whether you want to discuss AI internships, Python projects, website ideas, or just talk tech — my inbox is always open.
             </p>
           </motion.div>
@@ -152,17 +152,17 @@ export const ContactSection: React.FC = () => {
                 data-cursor={`OPEN ${btn.name.toUpperCase()} ↗`}
               >
                 <div className="flex items-center justify-between">
-                  <div className="p-3 rounded-2xl bg-cherry/40 text-blush group-hover:scale-110 transition-transform">
+                  <div className="p-3.5 rounded-2xl bg-cherry/40 text-blush group-hover:scale-110 transition-transform">
                     <IconComponent className="w-6 h-6" />
                   </div>
-                  <ArrowUpRight className="w-5 h-5 text-blush/60 group-hover:text-blush group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
+                  <ArrowUpRight className="w-5 h-5 text-blush group-hover:text-blush group-hover:translate-x-1 group-hover:-translate-y-1 transition-all" />
                 </div>
 
                 <div>
-                  <p className="font-display font-extrabold text-2xl text-white group-hover:text-blush transition-colors">
+                  <p className="font-display font-extrabold text-2xl sm:text-3xl text-white group-hover:text-blush transition-colors">
                     {btn.name}
                   </p>
-                  <p className="text-xs font-mono text-blush/70 truncate mt-1">
+                  <p className="text-sm font-mono text-blush truncate mt-1 font-semibold">
                     {btn.detail}
                   </p>
                 </div>
@@ -172,7 +172,7 @@ export const ContactSection: React.FC = () => {
         </div>
 
         {/* Bottom Resume Download & Copyright */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 border-t border-cherry/30 pt-10 text-xs font-mono text-blush/70">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 border-t border-cherry/30 pt-10 text-sm font-mono text-blush font-medium">
           <div className="flex items-center gap-4">
             <a
               href={ensureAbsoluteUrl(contact.resumeUrl)}
@@ -180,7 +180,7 @@ export const ContactSection: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => soundFx.playClick()}
-              className="flex items-center gap-2 px-6 py-3 rounded-full bg-blush text-nearblack font-bold hover:scale-105 transition-transform"
+              className="flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-blush text-nearblack font-bold hover:scale-105 transition-transform"
               data-cursor="RESUME ↓"
             >
               <Download className="w-4 h-4" />

@@ -21,7 +21,7 @@ export const WritingSection: React.FC = () => {
           className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-cherry/10 dark:border-blush/10 pb-8"
         >
           <div>
-            <span className="text-xs font-mono tracking-widest text-cherry dark:text-blush uppercase block mb-2">
+            <span className="text-sm font-mono font-semibold tracking-widest text-cherry dark:text-blush uppercase block mb-2">
               06 / ARTICLES & REFLECTIONS
             </span>
             <h2 className="text-5xl md:text-7xl font-display font-extrabold text-cherry dark:text-cream tracking-tight">
@@ -36,10 +36,10 @@ export const WritingSection: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => soundFx.playClick()}
-            className="flex items-center gap-2 px-4 py-2 rounded-full border border-cherry/20 dark:border-blush/20 text-xs font-mono text-cherry dark:text-blush hover:bg-cherry hover:text-cream dark:hover:bg-blush dark:hover:text-nearblack transition-all w-max"
+            className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-cherry/20 dark:border-blush/20 text-xs sm:text-sm font-mono font-bold text-cherry dark:text-blush hover:bg-cherry hover:text-cream dark:hover:bg-blush dark:hover:text-nearblack transition-all w-max"
             data-cursor="MEDIUM ↗"
           >
-            <BookOpen className="w-3.5 h-3.5" />
+            <BookOpen className="w-4 h-4" />
             <span>VIEW ON MEDIUM ↗</span>
           </a>
         </motion.div>
@@ -61,23 +61,23 @@ export const WritingSection: React.FC = () => {
               data-cursor="READ ↗"
             >
               <div className="flex flex-col gap-4">
-                <div className="flex items-center justify-between text-xs font-mono text-cherry/70 dark:text-blush/70">
+                <div className="flex items-center justify-between text-xs sm:text-sm font-mono text-cherry/80 dark:text-blush/80 font-semibold">
                   <span>{article.topic}</span>
                   <span>{article.readTime}</span>
                 </div>
 
-                <h3 className="text-xl font-display font-extrabold text-cherry dark:text-cream group-hover:text-cherry-dark dark:group-hover:text-blush transition-colors leading-snug">
+                <h3 className="text-2xl font-display font-extrabold text-cherry dark:text-cream group-hover:text-cherry-dark dark:group-hover:text-blush transition-colors leading-snug">
                   {article.title}
                 </h3>
 
-                <p className="text-xs text-nearblack/80 dark:text-cream/80 font-light leading-relaxed">
+                <p className="text-base sm:text-lg text-nearblack dark:text-cream leading-relaxed font-normal">
                   "{article.snippet}"
                 </p>
               </div>
 
-              <div className="flex items-center justify-between border-t border-cherry/10 dark:border-blush/10 pt-4 mt-6 text-xs font-mono text-cherry dark:text-blush font-bold group-hover:translate-x-1 transition-transform">
+              <div className="flex items-center justify-between border-t border-cherry/10 dark:border-blush/10 pt-4 mt-6 text-sm font-mono text-cherry dark:text-blush font-bold group-hover:translate-x-1 transition-transform">
                 <span>READ ARTICLE</span>
-                <ExternalLink className="w-3.5 h-3.5" />
+                <ExternalLink className="w-4 h-4" />
               </div>
             </motion.a>
           ))}

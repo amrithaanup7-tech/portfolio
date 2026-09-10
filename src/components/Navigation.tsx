@@ -74,7 +74,7 @@ export const Navigation: React.FC = () => {
           </a>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-8 text-xs font-mono tracking-widest text-nearblack/80 dark:text-cream/80">
+          <nav className="hidden lg:flex items-center gap-8 text-sm font-mono tracking-wider font-semibold text-nearblack dark:text-cream">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -87,7 +87,7 @@ export const Navigation: React.FC = () => {
                 data-cursor="GO ↗"
               >
                 <span>{link.name}</span>
-                <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-cherry dark:bg-blush group-hover:w-full transition-all duration-300" />
+                <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-cherry dark:bg-blush group-hover:w-full transition-all duration-300" />
               </a>
             ))}
           </nav>
@@ -104,10 +104,10 @@ export const Navigation: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => soundFx.playClick()}
-              className="flex items-center gap-2 px-4 py-2 rounded-full text-xs font-mono font-semibold bg-cherry text-cream dark:bg-blush dark:text-nearblack hover:opacity-90 hover:scale-105 transition-all shadow-md"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-mono font-bold bg-cherry text-cream dark:bg-blush dark:text-nearblack hover:opacity-90 hover:scale-105 transition-all shadow-md"
               data-cursor="RESUME ↓"
             >
-              <Download className="w-3.5 h-3.5" />
+              <Download className="w-4 h-4" />
               <span>RESUME ↓</span>
             </a>
           </div>

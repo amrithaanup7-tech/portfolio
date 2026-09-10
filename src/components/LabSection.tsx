@@ -78,42 +78,42 @@ export const LabSection: React.FC = () => {
               <div className="absolute -top-3 left-8 w-24 h-6 bg-blush/40 dark:bg-cherry/40 backdrop-blur-sm -rotate-2 border border-cherry/20 dark:border-blush/20" />
 
               {/* Top Meta */}
-              <div className="flex items-center justify-between text-xs font-mono text-cherry/70 dark:text-blush/70 mb-4 pt-2">
-                <span>{item.code}</span>
-                <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold border border-cherry/30 dark:border-blush/30 bg-cherry/5 dark:bg-blush/5 text-cherry dark:text-blush">
+              <div className="flex items-center justify-between text-xs sm:text-sm font-mono text-cherry/80 dark:text-blush/80 mb-4 pt-2">
+                <span className="font-bold">{item.code}</span>
+                <span className="px-3 py-1 rounded-full text-xs font-bold border border-cherry/30 dark:border-blush/30 bg-cherry/5 dark:bg-blush/5 text-cherry dark:text-blush">
                   {item.status}
                 </span>
               </div>
 
               {/* Item Title */}
-              <h3 className="text-2xl font-display font-extrabold text-cherry dark:text-cream mb-3 group-hover:text-cherry-dark dark:group-hover:text-blush transition-colors">
+              <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-cherry dark:text-cream mb-3 group-hover:text-cherry-dark dark:group-hover:text-blush transition-colors">
                 {item.title}
               </h3>
 
               {/* What I Tried */}
-              <div className="flex flex-col gap-1 mb-4">
-                <span className="text-[10px] font-mono tracking-widest text-cherry/60 dark:text-blush/60 uppercase">
+              <div className="flex flex-col gap-1.5 mb-4">
+                <span className="text-xs font-mono tracking-widest text-cherry/80 dark:text-blush/80 uppercase font-bold">
                   WHAT I TRIED:
                 </span>
-                <p className="text-xs text-nearblack/80 dark:text-cream/80 font-light leading-relaxed">
+                <p className="text-base sm:text-lg text-nearblack dark:text-cream leading-relaxed font-normal">
                   {item.whatITried}
                 </p>
               </div>
 
               {/* What I Learned */}
-              <div className="flex flex-col gap-1 mb-6 p-3.5 rounded-2xl bg-cream-card dark:bg-nearblack-card border border-cherry/10 dark:border-blush/10">
-                <span className="text-[10px] font-mono tracking-widest text-cherry dark:text-blush font-bold uppercase">
+              <div className="flex flex-col gap-1.5 mb-6 p-4 rounded-2xl bg-cream-card dark:bg-nearblack-card border border-cherry/10 dark:border-blush/10">
+                <span className="text-xs font-mono tracking-widest text-cherry dark:text-blush font-bold uppercase">
                   WHAT I LEARNED:
                 </span>
-                <p className="text-xs text-nearblack/90 dark:text-cream/90 font-serif italic">
+                <p className="text-base sm:text-lg text-nearblack dark:text-cream font-serif italic">
                   "{item.whatILearned}"
                 </p>
               </div>
 
               {/* Technology Tag */}
-              <div className="flex items-center justify-between border-t border-cherry/10 dark:border-blush/10 pt-4 text-xs font-mono text-cherry/80 dark:text-blush/80">
+              <div className="flex items-center justify-between border-t border-cherry/10 dark:border-blush/10 pt-4 text-xs sm:text-sm font-mono text-cherry/90 dark:text-blush/90 font-medium">
                 <span>TECH: {item.technology}</span>
-                <span className="text-[10px] text-cherry/50 dark:text-blush/50">ENTRY #{idx + 1}</span>
+                <span className="text-xs text-cherry/70 dark:text-blush/70 font-semibold">ENTRY #{idx + 1}</span>
               </div>
             </motion.div>
           ))}

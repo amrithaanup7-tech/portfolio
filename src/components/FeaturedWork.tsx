@@ -88,10 +88,10 @@ export const FeaturedWork: React.FC = () => {
             {/* Left Content */}
             <div className="lg:col-span-7 flex flex-col gap-4">
               <div className="flex flex-wrap items-center gap-2">
-                <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-blush text-cherry">
+                <span className="px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-mono font-bold bg-blush text-cherry">
                   PRODUCT CASE STUDY
                 </span>
-                <span className="px-3 py-1 rounded-full text-xs font-mono border border-blush/30 text-blush">
+                <span className="px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-mono font-semibold border border-blush/30 text-blush">
                   CONSTRUCTION-TECH & AI
                 </span>
               </div>
@@ -100,12 +100,12 @@ export const FeaturedWork: React.FC = () => {
                 <h3 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white tracking-tight">
                   {project.name}
                 </h3>
-                <p className="text-base sm:text-lg font-serif italic text-blush mt-1">
+                <p className="text-lg sm:text-xl font-serif italic text-blush mt-1">
                   {project.tagline}
                 </p>
               </div>
 
-              <p className="text-xs sm:text-sm text-cream/90 font-light leading-relaxed">
+              <p className="text-base sm:text-lg text-cream leading-relaxed font-normal">
                 {project.conciseOverview}
               </p>
 
@@ -114,7 +114,7 @@ export const FeaturedWork: React.FC = () => {
                 {['Instant Rental Search', 'Digital Contracts', 'AI Route & Match', 'Transparent Pricing'].map((chip) => (
                   <span
                     key={chip}
-                    className="px-2.5 py-1 rounded-lg text-xs font-mono bg-cherry/30 text-blush border border-blush/20"
+                    className="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-mono font-medium bg-cherry/30 text-blush border border-blush/20"
                   >
                     ✦ {chip}
                   </span>
@@ -125,7 +125,7 @@ export const FeaturedWork: React.FC = () => {
               <div className="pt-2">
                 <button
                   onClick={() => openDeckModal(0)}
-                  className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-blush text-cherry font-mono font-bold text-xs tracking-wider uppercase hover:scale-105 transition-all shadow-lg group"
+                  className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-blush text-cherry font-mono font-bold text-xs sm:text-sm tracking-wider uppercase hover:scale-105 transition-all shadow-lg group"
                 >
                   <Eye className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   <span>VIEW FULL PITCH DECK ({totalSlides} SLIDES)</span>
@@ -145,9 +145,9 @@ export const FeaturedWork: React.FC = () => {
                   className="w-full h-auto object-cover group-hover:scale-102 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-nearblack/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between px-3 py-1.5 rounded-xl bg-nearblack/90 backdrop-blur-md border border-blush/30 text-[11px] font-mono text-cream">
+                <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between px-3 py-1.5 rounded-xl bg-nearblack/90 backdrop-blur-md border border-blush/30 text-xs font-mono text-cream">
                   <span className="text-blush font-bold">CLICK TO EXPAND DECK</span>
-                  <span className="text-blush/70">1 / {totalSlides} ↗</span>
+                  <span className="text-blush/70 font-semibold">1 / {totalSlides} ↗</span>
                 </div>
               </div>
             </div>
@@ -158,12 +158,12 @@ export const FeaturedWork: React.FC = () => {
             {project.marketStats.map((item) => (
               <div
                 key={item.label}
-                className="p-3 rounded-xl bg-nearblack-surface/90 border border-cherry/30 flex flex-col items-center justify-center"
+                className="p-3.5 rounded-xl bg-nearblack-surface/90 border border-cherry/30 flex flex-col items-center justify-center"
               >
-                <span className="text-lg sm:text-xl font-display font-bold text-blush">
+                <span className="text-xl sm:text-2xl font-display font-extrabold text-blush">
                   {item.stat}
                 </span>
-                <span className="text-[11px] font-mono font-medium text-cream/90 mt-0.5">
+                <span className="text-xs sm:text-sm font-mono font-semibold text-cream mt-0.5">
                   {item.label}
                 </span>
               </div>

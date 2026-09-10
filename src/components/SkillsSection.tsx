@@ -66,16 +66,16 @@ export const SkillsSection: React.FC = () => {
               <div className="absolute top-0 right-0 p-4 opacity-15">
                 <span className="font-mono text-7xl font-bold">01</span>
               </div>
-              <span className="text-[10px] font-mono tracking-widest text-blush uppercase block mb-3 font-bold">
+              <span className="text-xs sm:text-sm font-mono tracking-wider text-blush uppercase block mb-3 font-bold">
                 {currentlyLearning.title}
               </span>
               <h3 className="text-3xl font-display font-extrabold text-white mb-2">
                 {currentlyLearning.skills[0].name}
               </h3>
-              <p className="text-xs font-mono text-blush/90 mb-4">
+              <p className="text-sm font-mono text-blush mb-4 font-semibold">
                 {currentlyLearning.skills[0].level}
               </p>
-              <p className="text-xs font-light text-cream/90 border-t border-blush/20 pt-4">
+              <p className="text-base text-cream leading-relaxed border-t border-blush/20 pt-4 font-normal">
                 {currentlyLearning.description}
               </p>
             </motion.div>
@@ -91,16 +91,16 @@ export const SkillsSection: React.FC = () => {
               <div className="absolute top-0 right-0 p-4 opacity-10 text-cherry dark:text-blush">
                 <span className="font-mono text-7xl font-bold">02</span>
               </div>
-              <span className="text-[10px] font-mono tracking-widest text-cherry dark:text-blush uppercase block mb-3 font-bold">
+              <span className="text-xs sm:text-sm font-mono tracking-wider text-cherry dark:text-blush uppercase block mb-3 font-bold">
                 {justStarted.title}
               </span>
               <h3 className="text-3xl font-display font-extrabold text-cherry dark:text-cream mb-2">
                 {justStarted.skills[0].name}
               </h3>
-              <p className="text-xs font-mono text-cherry/80 dark:text-blush/80 mb-4">
+              <p className="text-sm font-mono text-cherry dark:text-blush mb-4 font-semibold">
                 {justStarted.skills[0].level}
               </p>
-              <p className="text-xs font-light text-nearblack/80 dark:text-cream/80 border-t border-cherry/10 dark:border-blush/10 pt-4">
+              <p className="text-base text-nearblack dark:text-cream leading-relaxed border-t border-cherry/10 dark:border-blush/10 pt-4 font-normal">
                 {justStarted.description}
               </p>
             </motion.div>
@@ -116,17 +116,17 @@ export const SkillsSection: React.FC = () => {
               <div className="absolute top-0 right-0 p-4 opacity-10 text-cherry dark:text-blush">
                 <span className="font-mono text-7xl font-bold">03</span>
               </div>
-              <span className="text-[10px] font-mono tracking-widest text-cherry dark:text-blush uppercase block mb-3 font-bold">
+              <span className="text-xs sm:text-sm font-mono tracking-wider text-cherry dark:text-blush uppercase block mb-3 font-bold">
                 {foundations.title}
               </span>
               <div className="flex flex-col gap-2 mb-4">
                 {foundations.skills.map((s) => (
-                  <span key={s.name} className="text-lg font-display font-bold text-cherry dark:text-cream">
+                  <span key={s.name} className="text-xl font-display font-bold text-cherry dark:text-cream">
                     {s.name}
                   </span>
                 ))}
               </div>
-              <p className="text-xs font-light text-nearblack/80 dark:text-cream/80 border-t border-cherry/10 dark:border-blush/10 pt-4">
+              <p className="text-base text-nearblack dark:text-cream leading-relaxed border-t border-cherry/10 dark:border-blush/10 pt-4 font-normal">
                 {foundations.description}
               </p>
             </motion.div>
@@ -142,18 +142,18 @@ export const SkillsSection: React.FC = () => {
               <div className="absolute top-0 right-0 p-4 opacity-20 text-blush">
                 <span className="font-mono text-7xl font-bold">04</span>
               </div>
-              <span className="text-[10px] font-mono tracking-widest text-blush uppercase block mb-3 font-bold">
+              <span className="text-xs sm:text-sm font-mono tracking-wider text-blush uppercase block mb-3 font-bold">
                 {nextPath.title}
               </span>
-              <div className="flex flex-col gap-1 mb-3">
+              <div className="flex flex-col gap-1.5 mb-3">
                 {nextPath.skills.map((s) => (
-                  <span key={s.name} className="text-base font-display font-bold text-blush">
+                  <span key={s.name} className="text-lg font-display font-bold text-blush">
                     → {s.name}
                   </span>
                 ))}
               </div>
-              <p className="text-xs font-mono text-blush/70 mb-2">Honest state: Aspiring / Planned</p>
-              <p className="text-xs font-light text-cream/80 border-t border-blush/20 pt-3">
+              <p className="text-sm font-mono text-blush mb-2 font-medium">Honest state: Aspiring / Planned</p>
+              <p className="text-base text-cream leading-relaxed border-t border-blush/20 pt-3 font-normal">
                 {nextPath.description}
               </p>
             </motion.div>
