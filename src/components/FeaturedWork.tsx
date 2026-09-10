@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { BUILDLINK_DATA } from '../data/profile';
 import { WebDecoration } from './WebDecoration';
+import { Y2kPlanetRing } from './Y2kElements';
 import { soundFx } from '../utils/sound';
 
 export const FeaturedWork: React.FC = () => {
@@ -54,21 +55,27 @@ export const FeaturedWork: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-cherry/10 dark:border-blush/10 pb-6"
         >
-          <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold bg-blush/30 dark:bg-blush/10 text-cherry dark:text-blush mb-2">
-              <Sparkles className="w-3.5 h-3.5 animate-spin" />
-              <span>02 / FEATURED PROJECT</span>
+          <div className="flex items-center justify-between w-full">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs sm:text-sm font-mono font-bold bg-blush/30 dark:bg-blush/10 text-cherry dark:text-blush mb-2">
+                <Sparkles className="w-3.5 h-3.5 animate-spin" />
+                <span>02 / FEATURED PROJECT</span>
+              </div>
+              <h2 className="text-4xl sm:text-6xl font-display font-extrabold text-cherry dark:text-cream tracking-tight">
+                SELECTED{' '}
+                <span className="font-serif italic font-normal text-cherry dark:text-blush">
+                  work.
+                </span>
+              </h2>
             </div>
-            <h2 className="text-4xl sm:text-6xl font-display font-extrabold text-cherry dark:text-cream tracking-tight">
-              SELECTED{' '}
-              <span className="font-serif italic font-normal text-cherry dark:text-blush">
-                work.
-              </span>
-            </h2>
+            
+            <div className="hidden sm:flex items-center gap-4">
+              <Y2kPlanetRing size={48} opacity={0.3} className="text-cherry dark:text-blush" />
+              <p className="text-xs sm:text-sm font-mono text-nearblack/80 dark:text-cream/80 max-w-xs">
+                Product case study: AI-Powered Construction Equipment Rental Marketplace.
+              </p>
+            </div>
           </div>
-          <p className="text-xs sm:text-sm font-mono text-nearblack/70 dark:text-cream/70 max-w-xs">
-            Product case study: AI-Powered Construction Equipment Rental Marketplace.
-          </p>
         </motion.div>
 
         {/* Unified Concise BuildLink Showcase Card */}

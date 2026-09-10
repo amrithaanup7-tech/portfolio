@@ -4,6 +4,7 @@ import { Sparkles, Terminal, Code2, GraduationCap, Briefcase } from 'lucide-reac
 import { PROFILE } from '../data/profile';
 import { GwenCharacter } from './GwenCharacter';
 import { WebDecoration } from './WebDecoration';
+import { Y2kCrescentSparkle } from './Y2kElements';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -116,10 +117,15 @@ export const AboutSection: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="relative"
           >
-            <span className="text-sm font-mono font-semibold tracking-widest text-cherry dark:text-blush uppercase block mb-2">
-              01 / ABOUT AMRITHA
-            </span>
+            <div className="flex items-center justify-between">
+              <span className="text-sm font-mono font-semibold tracking-widest text-cherry dark:text-blush uppercase block mb-2">
+                01 / ABOUT AMRITHA
+              </span>
+              <Y2kCrescentSparkle size={44} opacity={0.3} className="text-cherry dark:text-blush hidden sm:block" />
+            </div>
+            
             <h2 className="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold text-cherry dark:text-cream tracking-tight leading-none">
               WH<span className="text-blush">O</span>'S{' '}
               <span className="font-serif italic font-normal text-cherry dark:text-blush">

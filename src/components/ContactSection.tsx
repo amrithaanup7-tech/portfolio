@@ -4,6 +4,7 @@ import { Mail, BookOpen, Download, ArrowUpRight } from 'lucide-react';
 import { PROFILE } from '../data/profile';
 import { GwenCharacter } from './GwenCharacter';
 import { WebDecoration } from './WebDecoration';
+import { Y2kOrbitalStar } from './Y2kElements';
 import { soundFx } from '../utils/sound';
 import { ensureAbsoluteUrl } from '../utils/url';
 
@@ -127,9 +128,15 @@ export const ContactSection: React.FC = () => {
               </span>
             </h2>
 
-            <p className="text-xl sm:text-2xl font-normal text-cream max-w-2xl mt-4 leading-relaxed">
-              Whether you want to discuss AI internships, Python projects, website ideas, or just talk tech — my inbox is always open.
-            </p>
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mt-4">
+              <p className="text-xl sm:text-2xl font-normal text-cream max-w-2xl leading-relaxed">
+                Whether you want to discuss AI internships, Python projects, website ideas, or just talk tech — my inbox is always open.
+              </p>
+              
+              <div className="hidden sm:block">
+                <Y2kOrbitalStar size={48} opacity={0.35} className="text-blush" />
+              </div>
+            </div>
           </motion.div>
         </div>
 

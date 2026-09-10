@@ -4,6 +4,7 @@ import { ArrowDownRight, Sparkles } from 'lucide-react';
 import { PROFILE } from '../data/profile';
 import { GwenReveal } from './GwenReveal';
 import { WebDecoration } from './WebDecoration';
+import { Y2kOrbitalStar, Y2kDoubleOrbit } from './Y2kElements';
 import { soundFx } from '../utils/sound';
 
 export const HeroSection: React.FC = () => {
@@ -22,16 +23,20 @@ export const HeroSection: React.FC = () => {
       <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center relative z-10">
         {/* Left Column — Editorial Typography & Info */}
         <div className="lg:col-span-7 flex flex-col justify-center gap-6">
-          {/* Status Label */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cherry/20 dark:border-blush/20 bg-cream-card dark:bg-nearblack-card text-cherry dark:text-blush font-mono text-sm font-semibold w-max"
-          >
-            <Sparkles className="w-4 h-4 text-cherry dark:text-blush animate-spin" />
-            <span>STATUS: LEARNING & BUILDING</span>
-          </motion.div>
+          {/* Status Label & Minimal Y2K Orbital Sparkle */}
+          <div className="flex items-center justify-between">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cherry/20 dark:border-blush/20 bg-cream-card dark:bg-nearblack-card text-cherry dark:text-blush font-mono text-sm font-semibold w-max"
+            >
+              <Sparkles className="w-4 h-4 text-cherry dark:text-blush animate-spin" />
+              <span>STATUS: LEARNING & BUILDING</span>
+            </motion.div>
+            
+            <Y2kOrbitalStar size={42} opacity={0.35} className="text-cherry dark:text-blush hidden sm:block" />
+          </div>
 
           {/* Main Giant Heading */}
           <motion.div
@@ -99,8 +104,12 @@ export const HeroSection: React.FC = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="lg:col-span-5 flex justify-center"
+          className="lg:col-span-5 flex justify-center relative"
         >
+          {/* Subtle Y2K Celestial Double Orbit Accent */}
+          <div className="absolute -top-6 -right-4 hidden sm:block">
+            <Y2kDoubleOrbit size={52} opacity={0.3} className="text-cherry dark:text-blush" />
+          </div>
           <GwenReveal />
         </motion.div>
       </div>

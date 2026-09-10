@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { PROFILE } from '../data/profile';
 import { GwenCharacter } from './GwenCharacter';
 import { WebDecoration } from './WebDecoration';
+import { Y2kStarSeal } from './Y2kElements';
 
 export const SkillsSection: React.FC = () => {
   const { currentlyLearning, justStarted, foundations, nextPath } = PROFILE.skills;
@@ -18,18 +19,22 @@ export const SkillsSection: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto flex flex-col gap-3"
+          className="text-center max-w-3xl mx-auto flex flex-col items-center gap-3 relative"
         >
-          <span className="text-xs font-mono tracking-widest text-cherry dark:text-blush uppercase">
-            04 / HONEST SKILL MAP
-          </span>
+          <div className="flex items-center justify-center gap-3">
+            <span className="text-xs sm:text-sm font-mono tracking-widest text-cherry dark:text-blush uppercase font-semibold">
+              04 / HONEST SKILL MAP
+            </span>
+            <Y2kStarSeal size={32} opacity={0.35} className="text-cherry dark:text-blush" />
+          </div>
+
           <h2 className="text-5xl md:text-7xl font-display font-extrabold text-cherry dark:text-cream tracking-tight">
             CURRENTLY{' '}
             <span className="font-serif italic font-normal text-cherry dark:text-blush">
               learning.
             </span>
           </h2>
-          <p className="text-sm md:text-base font-serif italic text-cherry/80 dark:text-blush/90">
+          <p className="text-base md:text-lg font-serif italic text-cherry/90 dark:text-blush">
             No fake percentage bars. Just transparent, genuine documentation of my growing skill set.
           </p>
         </motion.div>
