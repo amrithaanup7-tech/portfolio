@@ -110,7 +110,7 @@ export const GwenReveal: React.FC = () => {
                 Amritha Anup
               </p>
               <p className="text-sm font-mono text-blush font-semibold">
-                AI Intern @ EXCAPE.AI
+                AI Developer Intern @ EXCAPE.AI
               </p>
             </div>
           </motion.div>

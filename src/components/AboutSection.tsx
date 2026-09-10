@@ -61,7 +61,7 @@ export const AboutSection: React.FC = () => {
                   Amritha Anup
                 </h3>
                 <p className="text-base font-mono text-blush mt-1 font-medium">
-                  AI Intern @ EXCAPE.AI
+                  AI Developer Intern @ EXCAPE.AI
                 </p>
               </div>
 
@@ -71,7 +71,7 @@ export const AboutSection: React.FC = () => {
                   <Briefcase className="w-5 h-5 text-blush shrink-0" />
                   <div>
                     <span className="text-xs font-mono text-blush/80 font-bold uppercase tracking-wider block">ROLE</span>
-                    <span className="text-sm font-mono font-bold text-cream">AI Intern</span>
+                    <span className="text-sm font-mono font-bold text-cream">AI Developer Intern</span>
                   </div>
                 </div>
 

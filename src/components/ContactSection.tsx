@@ -130,7 +130,7 @@ export const ContactSection: React.FC = () => {
 
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mt-4">
               <p className="text-xl sm:text-2xl font-normal text-cream max-w-2xl leading-relaxed">
-                Whether you want to discuss AI internships, Python projects, website ideas, or just talk tech — my inbox is always open.
+                Whether you want to discuss AI development, Python projects, website ideas, or just talk tech — my inbox is always open.
               </p>
               
               <div className="hidden sm:block">

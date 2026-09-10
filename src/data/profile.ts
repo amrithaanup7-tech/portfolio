@@ -333,13 +333,13 @@ export const BUILDLINK_DATA: BuildLinkData = {
 
 export const PROFILE = {
   name: "AMRITHA",
-  headline: "AI INTERN × PYTHON LEARNER × BUILDER",
-  companySubtext: "AI INTERN @ EXCAPE.AI",
+  headline: "AI DEVELOPER INTERN × PYTHON LEARNER × BUILDER",
+  companySubtext: "AI DEVELOPER INTERN @ EXCAPE.AI",
   heroDescription: "Exploring the space between code, data and AI — turning curiosity into things I can actually build.",
   philosophy: "I am still learning, but I am actively building.",
   
   aboutBio: [
-    "I'm Amritha — an AI intern who enjoys learning by actually building things. I'm currently developing my Python foundations while exploring how code, data and AI come together.",
+    "I'm Amritha — an AI developer intern who enjoys learning by actually building things. I'm currently developing my Python foundations while exploring how code, data and AI come together.",
     "I'm early in the journey, and that's exactly what this portfolio documents: what I'm learning, what I'm experimenting with and what I build along the way."
   ],
 
@@ -432,13 +432,13 @@ export const PROFILE = {
   },
 
   experience: {
-    role: "AI Intern",
+    role: "AI Developer Intern",
     company: "EXCAPE.AI",
     period: "Present",
     status: "Active Internship",
     description: "Getting hands-on exposure to practical AI concepts, workflows, and tool integrations while strengthening core coding skills.",
     learnings: [
-      "Exploring real-world AI applications and intern workflows",
+      "Exploring real-world AI applications and developer intern workflows",
       "Building practical scripts and web interfaces",
       "Collaborating with technical teams on AI project experimentation"
     ]
@@ -453,7 +453,7 @@ export const PROFILE = {
 
   journeySteps: [
     { num: "01", label: "BCA Degree", detail: "VV College of Science & Technology" },
-    { num: "02", label: "AI Internship", detail: "EXCAPE.AI — Practical Exploration" },
+    { num: "02", label: "AI Dev Internship", detail: "EXCAPE.AI — Practical Development" },
     { num: "03", label: "Currently Learning", detail: "Python Foundations & Web Builds" },
     { num: "04", label: "What's Next?", detail: "Data Analysis → AI / ML Deep-Dive" }
   ],

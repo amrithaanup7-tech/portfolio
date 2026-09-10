@@ -48,7 +48,7 @@ export const HeroSection: React.FC = () => {
               AMRITHA
             </h1>
             <p className="font-serif italic text-2xl sm:text-3xl md:text-4xl text-cherry/90 dark:text-blush mt-3">
-              AI Intern <span className="font-sans not-italic text-base opacity-60 px-1.5">×</span> Python Learner <span className="font-sans not-italic text-base opacity-60 px-1.5">×</span> Builder
+              AI Developer Intern <span className="font-sans not-italic text-base opacity-60 px-1.5">×</span> Python Learner <span className="font-sans not-italic text-base opacity-60 px-1.5">×</span> Builder
             </p>
           </motion.div>
 

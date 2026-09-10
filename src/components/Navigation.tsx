@@ -221,7 +221,7 @@ export const Navigation: React.FC<NavigationProps> = ({ onOpenArcade }) => {
                 </a>
               </div>
               <p className="text-xs font-mono text-blush/70 text-center">
-                AMRITHA — AI INTERN & PYTHON LEARNER
+                AMRITHA — AI DEVELOPER INTERN & PYTHON LEARNER
               </p>
             </div>
           </motion.div>

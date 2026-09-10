@@ -80,7 +80,7 @@ export const ExperienceJourney: React.FC = () => {
             </div>
 
             <div className="pt-6 text-xs font-mono text-blush/80 font-semibold flex items-center justify-between border-t border-blush/20 mt-6">
-              <span>TITLE FACTUAL: AI INTERN</span>
+              <span>TITLE FACTUAL: AI DEVELOPER INTERN</span>
               <span>EXCAPE.AI</span>
             </div>
           </motion.div>
