@@ -2,10 +2,6 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Sparkles, 
-  AlertTriangle, 
-  Cpu, 
-  Coins, 
-  MapPin, 
   ChevronRight, 
   ChevronLeft, 
   Eye, 
@@ -75,33 +71,33 @@ export const FeaturedWork: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Unified BuildLink Showcase Card (Single Page Format) */}
+        {/* Unified Concise BuildLink Showcase Card */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="relative rounded-3xl overflow-hidden border-2 border-cherry/20 dark:border-blush/20 bg-nearblack text-cream shadow-2xl p-6 sm:p-10 md:p-12 flex flex-col gap-10"
+          className="relative rounded-3xl overflow-hidden border-2 border-cherry/20 dark:border-blush/20 bg-nearblack text-cream shadow-2xl p-6 sm:p-8 md:p-10 flex flex-col gap-6"
         >
           {/* Ambient Glow */}
           <div className="absolute inset-0 bg-gradient-to-br from-cherry/30 via-nearblack to-nearblack opacity-90 pointer-events-none" />
           <div className="absolute inset-0 halftone-overlay pointer-events-none opacity-20" />
 
-          {/* Top Row: Hero Overview & Slide Image */}
+          {/* Main Grid: Overview & Pitch Deck Preview */}
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Content */}
-            <div className="lg:col-span-7 flex flex-col gap-5">
+            <div className="lg:col-span-7 flex flex-col gap-4">
               <div className="flex flex-wrap items-center gap-2">
                 <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-blush text-cherry">
                   PRODUCT CASE STUDY
                 </span>
                 <span className="px-3 py-1 rounded-full text-xs font-mono border border-blush/30 text-blush">
-                  CONSTRUCTION-TECH
+                  CONSTRUCTION-TECH & AI
                 </span>
               </div>
 
               <div>
-                <h3 className="text-3xl sm:text-5xl font-display font-extrabold text-white tracking-tight">
+                <h3 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-white tracking-tight">
                   {project.name}
                 </h3>
                 <p className="text-base sm:text-lg font-serif italic text-blush mt-1">
@@ -113,14 +109,26 @@ export const FeaturedWork: React.FC = () => {
                 {project.conciseOverview}
               </p>
 
-              {/* View Full Pitch Deck Button */}
-              <div className="flex flex-wrap items-center gap-3 pt-1">
+              {/* Key Features Chips */}
+              <div className="flex flex-wrap gap-2 pt-1">
+                {['Instant Rental Search', 'Digital Contracts', 'AI Route & Match', 'Transparent Pricing'].map((chip) => (
+                  <span
+                    key={chip}
+                    className="px-2.5 py-1 rounded-lg text-xs font-mono bg-cherry/30 text-blush border border-blush/20"
+                  >
+                    ✦ {chip}
+                  </span>
+                ))}
+              </div>
+
+              {/* Action Button */}
+              <div className="pt-2">
                 <button
                   onClick={() => openDeckModal(0)}
-                  className="flex items-center gap-2.5 px-6 py-3 rounded-full bg-blush text-cherry font-mono font-bold text-xs tracking-wider uppercase hover:scale-105 transition-all shadow-lg group"
+                  className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-blush text-cherry font-mono font-bold text-xs tracking-wider uppercase hover:scale-105 transition-all shadow-lg group"
                 >
                   <Eye className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                  <span>VIEW PITCH DECK ({totalSlides} SLIDES)</span>
+                  <span>VIEW FULL PITCH DECK ({totalSlides} SLIDES)</span>
                 </button>
               </div>
             </div>
@@ -139,121 +147,27 @@ export const FeaturedWork: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-nearblack/80 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
                 <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between px-3 py-1.5 rounded-xl bg-nearblack/90 backdrop-blur-md border border-blush/30 text-[11px] font-mono text-cream">
                   <span className="text-blush font-bold">CLICK TO EXPAND DECK</span>
-                  <span className="text-blush/70">1 / 10 ↗</span>
+                  <span className="text-blush/70">1 / {totalSlides} ↗</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Middle Row: Market Potential Metrics */}
-          <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-3 pt-6 border-t border-blush/15">
+          {/* Bottom Sleek Metric Strip */}
+          <div className="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-3 pt-4 border-t border-blush/15 text-center">
             {project.marketStats.map((item) => (
               <div
                 key={item.label}
-                className="p-4 rounded-2xl bg-nearblack-surface/90 border border-cherry/30 flex flex-col justify-between"
+                className="p-3 rounded-xl bg-nearblack-surface/90 border border-cherry/30 flex flex-col items-center justify-center"
               >
-                <div className="text-xl sm:text-2xl font-display font-extrabold text-blush">
+                <span className="text-lg sm:text-xl font-display font-bold text-blush">
                   {item.stat}
-                </div>
-                <div className="mt-1">
-                  <p className="text-xs font-mono font-bold text-cream">
-                    {item.label}
-                  </p>
-                  <p className="text-[10px] text-cream/60 leading-tight">
-                    {item.sublabel}
-                  </p>
-                </div>
+                </span>
+                <span className="text-[11px] font-mono font-medium text-cream/90 mt-0.5">
+                  {item.label}
+                </span>
               </div>
             ))}
-          </div>
-
-          {/* Bottom Grid: 3 Clean Compact Product Pillars */}
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
-            
-            {/* Pillar 1: Problem & 4-Step Solution */}
-            <div className="p-5 rounded-2xl bg-nearblack-surface/90 border border-cherry/30 flex flex-col gap-3">
-              <div className="flex items-center gap-2 text-xs font-mono text-blush font-bold uppercase">
-                <AlertTriangle className="w-4 h-4 text-blush shrink-0" />
-                <span>Problem & 4-Step Flow</span>
-              </div>
-              <p className="text-xs text-cream/80 font-light leading-relaxed">
-                Replaces chaotic phone calls, hidden pricing & unverified availability with a 4-step digital workflow:
-              </p>
-              <div className="flex flex-col gap-1.5 pt-1 text-[11px] font-mono text-cream/90">
-                <div className="flex items-center gap-2 p-1.5 rounded-lg bg-cherry/20 border border-cherry/40">
-                  <span className="text-blush font-bold">01</span>
-                  <span>Search & Filter by Location</span>
-                </div>
-                <div className="flex items-center gap-2 p-1.5 rounded-lg bg-cherry/20 border border-cherry/40">
-                  <span className="text-blush font-bold">02</span>
-                  <span>List Equipment with Verified Rates</span>
-                </div>
-                <div className="flex items-center gap-2 p-1.5 rounded-lg bg-cherry/20 border border-cherry/40">
-                  <span className="text-blush font-bold">03</span>
-                  <span>Book & Pay with Digital Contracts</span>
-                </div>
-                <div className="flex items-center gap-2 p-1.5 rounded-lg bg-cherry/20 border border-cherry/40">
-                  <span className="text-blush font-bold">04</span>
-                  <span>Deliver Directly to Site</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Pillar 2: Categories & AI Capabilities */}
-            <div className="p-5 rounded-2xl bg-nearblack-surface/90 border border-cherry/30 flex flex-col gap-3">
-              <div className="flex items-center gap-2 text-xs font-mono text-blush font-bold uppercase">
-                <Cpu className="w-4 h-4 text-blush shrink-0" />
-                <span>Categories & AI Roadmap</span>
-              </div>
-              
-              <div className="flex flex-wrap gap-1.5">
-                {project.equipmentCategories.map((c) => (
-                  <span key={c} className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-cherry/20 text-blush border border-blush/20">
-                    {c}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex flex-col gap-1.5 pt-1 text-[11px] font-mono">
-                <div className="p-2 rounded-lg bg-nearblack border border-blush/20 text-cream/90">
-                  <span className="text-blush font-bold block text-[10px]">AI MATCHING & ROUTING</span>
-                  <span className="text-[10px] text-cream/70 font-light">Nearest machines & logistics cost minimization.</span>
-                </div>
-                <div className="p-2 rounded-lg bg-nearblack border border-blush/20 text-cream/90">
-                  <span className="text-blush font-bold block text-[10px]">PRICE & DEMAND OPTIMIZATION</span>
-                  <span className="text-[10px] text-cream/70 font-light">Competitive rental rates & predictive demand forecasting.</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Pillar 3: Business Model & Rollout */}
-            <div className="p-5 rounded-2xl bg-nearblack-surface/90 border border-cherry/30 flex flex-col gap-3">
-              <div className="flex items-center gap-2 text-xs font-mono text-blush font-bold uppercase">
-                <Coins className="w-4 h-4 text-blush shrink-0" />
-                <span>Business Model & Rollout</span>
-              </div>
-              
-              <div className="flex flex-col gap-1 text-[11px] font-mono text-cream/80">
-                <span className="text-blush font-bold">5 Revenue Streams:</span>
-                <span className="text-[10px] text-cream/70">
-                  • 10–15% Booking Commission<br/>
-                  • Premium Owner Listings & Subscriptions<br/>
-                  • Logistics & Insurance Partnerships
-                </span>
-              </div>
-
-              <div className="pt-2 border-t border-blush/20 flex flex-col gap-1 text-[11px] font-mono">
-                <span className="text-blush font-bold flex items-center gap-1">
-                  <MapPin className="w-3.5 h-3.5" />
-                  Expansion Phases:
-                </span>
-                <span className="text-[10px] text-cream/70">
-                  Phase 1: Kerala (Kochi · Trivandrum · Calicut)<br/>
-                  Phase 2: South India → Phase 3: Pan-India
-                </span>
-              </div>
-            </div>
-
           </div>
         </motion.div>
 
