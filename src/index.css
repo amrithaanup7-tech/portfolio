@@ -32,16 +32,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Halftone Effect Class */
+/* Minimal, Soft Diffused Dot Texture */
 .halftone-overlay {
-  background-image: radial-gradient(var(--color-cherry) 1.5px, transparent 1.5px);
-  background-size: 10px 10px;
-  opacity: 0.12;
+  background-image: radial-gradient(var(--color-cherry) 0.8px, transparent 0.8px);
+  background-size: 24px 24px;
+  opacity: 0.05;
+  filter: blur(0.5px);
 }
 
 .dark .halftone-overlay {
-  background-image: radial-gradient(var(--color-blush) 1.5px, transparent 1.5px);
-  opacity: 0.15;
+  background-image: radial-gradient(var(--color-blush) 0.8px, transparent 0.8px);
+  opacity: 0.06;
+  filter: blur(0.5px);
 }
 
 /* Paper Grain Texture */

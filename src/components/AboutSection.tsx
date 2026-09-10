@@ -35,8 +35,8 @@ export const AboutSection: React.FC = () => {
         >
           <div className="relative rounded-3xl overflow-hidden border-2 border-cherry/20 dark:border-blush/20 shadow-2xl bg-nearblack text-cream p-8 sm:p-10 flex flex-col justify-between gap-8 group">
             {/* Background Ambient Glow & Halftone */}
-            <div className="absolute inset-0 bg-gradient-to-br from-cherry/50 via-nearblack to-nearblack opacity-90 pointer-events-none" />
-            <div className="absolute inset-0 halftone-overlay pointer-events-none opacity-40" />
+            <div className="absolute inset-0 bg-gradient-to-br from-cherry/40 via-nearblack to-nearblack opacity-90 pointer-events-none" />
+            <div className="absolute inset-0 halftone-overlay pointer-events-none opacity-20" />
 
             <div className="relative z-10 flex flex-col gap-6">
               {/* Header Badge */}

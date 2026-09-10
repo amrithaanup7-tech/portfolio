@@ -51,7 +51,7 @@ export const ContactSection: React.FC = () => {
       className="relative py-32 px-6 md:px-12 bg-nearblack text-cream transition-colors duration-500 overflow-hidden"
     >
       {/* Background Halftone & Web Sketches */}
-      <div className="absolute inset-0 halftone-overlay opacity-30 pointer-events-none" />
+      <div className="absolute inset-0 halftone-overlay opacity-15 pointer-events-none" />
       <WebDecoration position="top-left" opacity={0.3} />
       <WebDecoration position="bottom-right" opacity={0.3} />
 
