@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { OpeningExperience } from './components/OpeningExperience';
-import { CustomCursor } from './components/CustomCursor';
 import { Navigation } from './components/Navigation';
 import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
@@ -24,9 +23,6 @@ export function App() {
       {!introFinished && (
         <OpeningExperience onComplete={() => setIntroFinished(true)} />
       )}
-
-      {/* Custom Trailing Spider Cursor */}
-      <CustomCursor />
 
       {/* Navigation Header */}
       <Navigation onOpenArcade={() => setIsArcadeOpen(true)} />

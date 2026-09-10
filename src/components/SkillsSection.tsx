@@ -6,7 +6,7 @@ import { WebDecoration } from './WebDecoration';
 import { Y2kStarSeal } from './Y2kElements';
 
 export const SkillsSection: React.FC = () => {
-  const { currentlyLearning, justStarted, foundations, nextPath } = PROFILE.skills;
+  const { currentlyLearning, justStarted, nextPath } = PROFILE.skills;
 
   return (
     <section id="skills" className="relative py-28 px-6 md:px-12 bg-cream dark:bg-nearblack transition-colors duration-500 overflow-hidden">
@@ -59,7 +59,7 @@ export const SkillsSection: React.FC = () => {
             <GwenCharacter pose="hero" interactive={true} />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* 01 — CURRENTLY LEARNING (PYTHON) */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -110,42 +110,16 @@ export const SkillsSection: React.FC = () => {
               </p>
             </motion.div>
 
-            {/* 03 — FOUNDATIONS */}
+            {/* 03 — NEXT UP (DATA & AI/ML) */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="p-8 rounded-3xl bg-cream-card dark:bg-nearblack-surface border-2 border-cherry/20 dark:border-blush/20 shadow-md relative overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 p-4 opacity-10 text-cherry dark:text-blush">
-                <span className="font-mono text-7xl font-bold">03</span>
-              </div>
-              <span className="text-xs sm:text-sm font-mono tracking-wider text-cherry dark:text-blush uppercase block mb-3 font-bold">
-                {foundations.title}
-              </span>
-              <div className="flex flex-col gap-2 mb-4">
-                {foundations.skills.map((s) => (
-                  <span key={s.name} className="text-xl font-display font-bold text-cherry dark:text-cream">
-                    {s.name}
-                  </span>
-                ))}
-              </div>
-              <p className="text-base text-nearblack dark:text-cream leading-relaxed border-t border-cherry/10 dark:border-blush/10 pt-4 font-normal">
-                {foundations.description}
-              </p>
-            </motion.div>
-
-            {/* 04 — NEXT UP (DATA & AI/ML) */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.3 }}
               className="p-8 rounded-3xl bg-nearblack text-cream border-2 border-cherry/30 dark:border-blush/30 shadow-xl relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 p-4 opacity-20 text-blush">
-                <span className="font-mono text-7xl font-bold">04</span>
+                <span className="font-mono text-7xl font-bold">03</span>
               </div>
               <span className="text-xs sm:text-sm font-mono tracking-wider text-blush uppercase block mb-3 font-bold">
                 {nextPath.title}
