@@ -58,7 +58,7 @@ export const AboutSection: React.FC = () => {
               {/* Identity Details */}
               <div>
                 <h3 className="text-3xl sm:text-4xl font-display font-extrabold text-white tracking-tight">
-                  Amritha Anup
+                  Amritha
                 </h3>
               </div>
 

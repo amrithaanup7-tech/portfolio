@@ -102,12 +102,8 @@ export const GwenReveal: React.FC = () => {
 
             {/* Bottom Label Card */}
             <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col gap-1 text-cream">
-              <div className="flex items-center justify-between text-xs sm:text-sm font-mono text-blush tracking-wider font-bold">
-                <span>REAL PORTRAIT</span>
-                <span>AMRITHA</span>
-              </div>
               <p className="font-display font-extrabold text-2xl sm:text-3xl tracking-tight text-white">
-                Amritha Anup
+                Amritha
               </p>
             </div>
           </motion.div>

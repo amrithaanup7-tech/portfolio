@@ -426,7 +426,7 @@ export const PROFILE = {
       description: "Where my curiosity is taking me next",
       skills: [
         { name: "Data Analysis", tag: "Future Step", level: "Planned" },
-        { name: "AI / Machine Learning", tag: "Long-term Goal", level: "Aspiring" }
+        { name: "AI Machine Learning", tag: "Long-term Goal", level: "Aspiring" }
       ]
     }
   },
@@ -455,7 +455,7 @@ export const PROFILE = {
     { num: "01", label: "BCA Degree", detail: "VV College of Science & Technology" },
     { num: "02", label: "AI Dev Internship", detail: "EXCAPE.AI — Practical Development" },
     { num: "03", label: "Currently Learning", detail: "Python Foundations & Web Builds" },
-    { num: "04", label: "What's Next?", detail: "Data Analysis → AI / ML Deep-Dive" }
+    { num: "04", label: "What's Next?", detail: "Data Analysis → AI Machine Learning" }
   ],
 
   articles: [
