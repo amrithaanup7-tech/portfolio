@@ -49,8 +49,8 @@ export const SkillsSection: React.FC = () => {
             />
           </svg>
 
-          {/* Spider-Gwen Mascot along the path */}
-          <div className="absolute top-4 right-12 w-20 md:w-28 hidden md:block z-20">
+          {/* Spider-Gwen Mascot perched above the skills grid */}
+          <div className="absolute -top-14 right-4 sm:right-8 w-16 md:w-20 hidden md:block z-20 pointer-events-auto">
             <GwenCharacter pose="hero" interactive={true} />
           </div>
 
