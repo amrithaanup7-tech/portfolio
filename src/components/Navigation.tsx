@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Download } from 'lucide-react';
+import { Menu, X, Download, Gamepad2 } from 'lucide-react';
 import { PROFILE } from '../data/profile';
 import { ThemeToggle } from './ThemeToggle';
 import { SoundToggle } from './SoundToggle';
 import { soundFx } from '../utils/sound';
 
-export const Navigation: React.FC = () => {
+interface NavigationProps {
+  onOpenArcade?: () => void;
+}
+
+export const Navigation: React.FC<NavigationProps> = ({ onOpenArcade }) => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
@@ -93,7 +97,21 @@ export const Navigation: React.FC = () => {
           </nav>
 
           {/* Right Action Controls */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-3">
+            {/* Arcade Minigame Trigger */}
+            <button
+              onClick={() => {
+                soundFx.playClick();
+                onOpenArcade?.();
+              }}
+              className="flex items-center gap-1.5 px-3.5 py-2 rounded-full text-xs font-mono font-bold bg-cherry/10 dark:bg-blush/15 text-cherry dark:text-blush border border-cherry/20 dark:border-blush/30 hover:bg-cherry hover:text-cream dark:hover:bg-blush dark:hover:text-nearblack transition-all shadow-sm"
+              data-cursor="PLAY 🎮"
+              title="Play Spider-Gwen Arcade Minigame"
+            >
+              <Gamepad2 className="w-3.5 h-3.5" />
+              <span>ARCADE</span>
+            </button>
+
             <SoundToggle />
             <ThemeToggle />
             
@@ -104,7 +122,7 @@ export const Navigation: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => soundFx.playClick()}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-mono font-bold bg-cherry text-cream dark:bg-blush dark:text-nearblack hover:opacity-90 hover:scale-105 transition-all shadow-md"
+              className="flex items-center gap-2 px-5 py-2 rounded-full text-xs sm:text-sm font-mono font-bold bg-cherry text-cream dark:bg-blush dark:text-nearblack hover:opacity-90 hover:scale-105 transition-all shadow-md"
               data-cursor="RESUME ↓"
             >
               <Download className="w-4 h-4" />
@@ -113,7 +131,17 @@ export const Navigation: React.FC = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex lg:hidden items-center gap-3">
+          <div className="flex lg:hidden items-center gap-2.5">
+            <button
+              onClick={() => {
+                soundFx.playClick();
+                onOpenArcade?.();
+              }}
+              className="p-2 rounded-full border border-cherry/20 dark:border-blush/20 bg-cream-card dark:bg-nearblack-card text-cherry dark:text-blush"
+              title="Play Arcade Game"
+            >
+              <Gamepad2 className="w-5 h-5" />
+            </button>
             <ThemeToggle />
             <button
               onClick={toggleMobileMenu}
@@ -162,6 +190,20 @@ export const Navigation: React.FC = () => {
                   <span className="font-mono text-sm opacity-60">0{idx + 1}</span>
                 </motion.a>
               ))}
+
+              <motion.button
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.5 }}
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onOpenArcade?.();
+                }}
+                className="flex items-center justify-center gap-2 py-3 px-6 rounded-2xl bg-blush text-cherry font-mono font-bold text-sm tracking-wider shadow-lg mt-2"
+              >
+                <Gamepad2 className="w-4 h-4" />
+                <span>PLAY GWEN ARCADE MINIGAME</span>
+              </motion.button>
             </nav>
 
             <div className="flex flex-col gap-4 border-t border-cream/20 pt-6">

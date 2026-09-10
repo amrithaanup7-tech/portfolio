@@ -107,13 +107,64 @@ class SoundEngine {
 
       gain.gain.setValueAtTime(0.01, this.ctx.currentTime);
       gain.gain.linearRampToValueAtTime(0.06, this.ctx.currentTime + 0.15);
-      gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.3);
-
       osc.connect(gain);
       gain.connect(this.ctx.destination);
 
       osc.start();
       osc.stop(this.ctx.currentTime + 0.3);
+    } catch {
+      // ignore
+    }
+  }
+
+  // Play jump sound
+  public playJump() {
+    this.initCtx();
+    if (!this.ctx) return;
+
+    try {
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(220, this.ctx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(480, this.ctx.currentTime + 0.12);
+
+      gain.gain.setValueAtTime(0.08, this.ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.12);
+
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+
+      osc.start();
+      osc.stop(this.ctx.currentTime + 0.12);
+    } catch {
+      // ignore
+    }
+  }
+
+  // Play sparkle / collectible pickup sound
+  public playSparkle() {
+    this.initCtx();
+    if (!this.ctx) return;
+
+    try {
+      const osc = this.ctx.createOscillator();
+      const gain = this.ctx.createGain();
+
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(587.33, this.ctx.currentTime); // D5
+      osc.frequency.setValueAtTime(880.00, this.ctx.currentTime + 0.05); // A5
+      osc.frequency.setValueAtTime(1174.66, this.ctx.currentTime + 0.1); // D6
+
+      gain.gain.setValueAtTime(0.06, this.ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.18);
+
+      osc.connect(gain);
+      gain.connect(this.ctx.destination);
+
+      osc.start();
+      osc.stop(this.ctx.currentTime + 0.18);
     } catch {
       // ignore
     }

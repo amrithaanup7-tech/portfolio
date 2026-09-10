@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import { Sparkles, Play, Gamepad2 } from 'lucide-react';
 import { PROFILE } from '../data/profile';
 import { GwenCharacter } from './GwenCharacter';
 import { WebDecoration } from './WebDecoration';
 import { soundFx } from '../utils/sound';
 
-export const LabSection: React.FC = () => {
+interface LabSectionProps {
+  onOpenArcade?: () => void;
+}
+
+export const LabSection: React.FC<LabSectionProps> = ({ onOpenArcade }) => {
   const [filter, setFilter] = useState<string>('ALL');
 
   const filters = ['ALL', 'BUILT', 'EXPERIMENT', 'LEARNING'];
@@ -63,6 +68,62 @@ export const LabSection: React.FC = () => {
           <div className="absolute -top-12 right-6 w-20 md:w-24 z-20 pointer-events-auto">
             <GwenCharacter pose="peek" interactive={true} />
           </div>
+
+          {/* Featured Interactive Minigame Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            onClick={() => {
+              soundFx.playClick();
+              onOpenArcade?.();
+            }}
+            className="relative md:col-span-2 p-7 sm:p-9 rounded-3xl bg-gradient-to-r from-cherry via-[#50041D] to-nearblack text-cream border-2 border-blush/40 hover:border-blush transition-all duration-300 shadow-xl cursor-pointer group overflow-hidden"
+            data-cursor="PLAY GAME 🎮"
+          >
+            {/* Cyber Grid Background */}
+            <div className="absolute inset-0 opacity-10 pointer-events-none">
+              <svg width="100%" height="100%">
+                <defs>
+                  <pattern id="arcade-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+                    <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#FFFFFF" strokeWidth="0.8" />
+                  </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#arcade-grid)" />
+              </svg>
+            </div>
+
+            <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
+              <div className="flex flex-col gap-2.5">
+                <div className="flex items-center gap-3">
+                  <span className="px-3.5 py-1 rounded-full text-xs font-mono font-bold bg-blush text-cherry uppercase tracking-wider flex items-center gap-1.5 shadow-sm">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    FEATURED INTERACTIVE MINIGAME
+                  </span>
+                  <span className="text-xs font-mono text-blush/90 font-bold">LAB / 000</span>
+                </div>
+                <h3 className="text-2xl sm:text-4xl font-display font-extrabold text-white tracking-tight group-hover:text-blush transition-colors flex items-center gap-3">
+                  <span>Spider-Gwen: Cyber Python Runner</span>
+                  <Gamepad2 className="w-7 h-7 text-blush shrink-0 hidden sm:inline-block" />
+                </h3>
+                <p className="text-sm sm:text-base font-serif italic text-cream/90 max-w-2xl leading-relaxed">
+                  A custom 60fps canvas mini-arcade game. Jump, web-swing, collect Python Star Runes (+10) & Neural Sparks (+25) while dodging glitch barriers!
+                </p>
+              </div>
+
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  soundFx.playClick();
+                  onOpenArcade?.();
+                }}
+                className="flex items-center gap-2.5 px-6 py-3.5 rounded-full bg-blush text-cherry font-mono font-extrabold text-xs sm:text-sm tracking-wider uppercase group-hover:scale-105 group-hover:bg-white transition-all shadow-xl shrink-0"
+              >
+                <Play className="w-4 h-4 fill-cherry" />
+                <span>LAUNCH ARCADE ▶</span>
+              </button>
+            </div>
+          </motion.div>
 
           {filteredItems.map((item, idx) => (
             <motion.div
