@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { GwenCharacter } from './GwenCharacter';
 import { soundFx } from '../utils/sound';
 
 interface IntroProps {
@@ -21,23 +20,20 @@ export const OpeningExperience: React.FC<IntroProps> = ({ onComplete }) => {
 
     soundFx.playWebSwoosh();
 
-    // Fast 1.8s sequence
-    const t1 = setTimeout(() => setStep(1), 400);  // PORTFOLIO / 2026
+    // Clean, fast 1.5s sequence
+    const t1 = setTimeout(() => setStep(1), 300);  // PORTFOLIO / 2026
     const t2 = setTimeout(() => {
       setStep(2);                                  // AMRITHA
-      soundFx.playSwing();
-    }, 900);
-    const t3 = setTimeout(() => setStep(3), 1500); // Gwen Swing
-    const t4 = setTimeout(() => {
+    }, 700);
+    const t3 = setTimeout(() => {
       setIsVisible(false);
       onComplete();
-    }, 1900);
+    }, 1500);
 
     return () => {
       clearTimeout(t1);
       clearTimeout(t2);
       clearTimeout(t3);
-      clearTimeout(t4);
     };
   }, [onComplete]);
 
@@ -110,18 +106,6 @@ export const OpeningExperience: React.FC<IntroProps> = ({ onComplete }) => {
             </motion.h1>
           )}
         </div>
-
-        {/* Spider Gwen Quick Swing Across Screen */}
-        {step >= 3 && (
-          <motion.div
-            className="absolute top-1/4 w-32 md:w-48 pointer-events-none z-20"
-            initial={{ x: '-100vw', y: '-50px', rotate: 25 }}
-            animate={{ x: '100vw', y: '100px', rotate: -25 }}
-            transition={{ duration: 0.6, ease: 'easeIn' }}
-          >
-            <GwenCharacter pose="hero" interactive={false} />
-          </motion.div>
-        )}
 
         {/* Skip note */}
         <div className="absolute bottom-6 right-8 text-blush/60 font-mono text-[10px] tracking-widest uppercase">
