@@ -50,7 +50,11 @@ export const OpeningExperience: React.FC<IntroProps> = ({ onComplete }) => {
         className="fixed inset-0 z-[100000] bg-cherry flex flex-col items-center justify-center overflow-hidden cursor-pointer"
         onClick={handleSkip}
         initial={{ opacity: 1 }}
-        exit={{ opacity: 0, transition: { duration: 0.5, ease: 'easeInOut' } }}
+        exit={{ 
+          opacity: 0, 
+          scale: 1.02, 
+          transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } 
+        }}
       >
         {/* Draw Web Line */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-40">

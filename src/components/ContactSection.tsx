@@ -58,26 +58,38 @@ export const ContactSection: React.FC = () => {
       <div className="max-w-7xl mx-auto flex flex-col gap-16 relative z-10">
         {/* Section Header with Gwen Swing Entrance */}
         <div className="relative">
-          {/* Spider-Gwen swinging across the headline to the end of the line */}
+          {/* Spider-Gwen ultra-smooth physics swing across the headline to the end of the line */}
           <motion.div
-            initial={{ x: '-80vw', y: -60, rotate: 30, opacity: 0 }}
+            initial={{ x: '-75vw', y: -70, rotate: 28, opacity: 0 }}
             whileInView={{ 
-              x: ['-80vw', '-20vw', '0px'], 
-              y: [-60, 30, 0], 
-              rotate: [30, -15, 0],
-              opacity: [0, 1, 1]
+              x: ['-75vw', '-35vw', '-10vw', '0px'], 
+              y: [-70, 35, -10, 0], 
+              rotate: [28, 0, -18, 0],
+              opacity: [0, 1, 1, 1]
             }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ 
+              duration: 1.8, 
+              times: [0, 0.45, 0.78, 1],
+              ease: ['easeInOut', 'easeOut', 'easeOut']
+            }}
             onAnimationStart={() => soundFx.playSwing()}
             className="absolute -top-16 sm:-top-20 md:-top-24 right-2 sm:right-6 md:right-10 w-24 sm:w-28 md:w-36 pointer-events-auto z-20"
           >
-            {/* Swinging Web Thread */}
+            {/* Smooth Swinging Web Thread */}
             <motion.div
-              initial={{ height: 120, opacity: 0.8 }}
-              animate={{ height: 60, opacity: 0.3 }}
-              transition={{ duration: 1.6 }}
-              className="absolute -top-24 left-1/2 -translate-x-1/2 w-[1.5px] bg-gradient-to-b from-transparent via-blush to-blush pointer-events-none"
+              initial={{ height: 110, opacity: 0.7, rotate: -20 }}
+              animate={{ 
+                height: [110, 70, 50, 45], 
+                opacity: [0.7, 0.5, 0.3, 0.2],
+                rotate: [-20, 0, 12, 0]
+              }}
+              transition={{ 
+                duration: 1.8, 
+                times: [0, 0.45, 0.78, 1],
+                ease: 'easeInOut' 
+              }}
+              className="absolute -top-20 left-1/2 -translate-x-1/2 w-[1.5px] bg-gradient-to-b from-transparent via-blush to-blush pointer-events-none origin-top"
             />
             <GwenCharacter pose="hero" interactive={true} />
           </motion.div>
