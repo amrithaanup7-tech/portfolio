@@ -33,12 +33,13 @@ export default {
         }
       },
       fontFamily: {
+        body: ['Cormorant Garamond', 'Playfair Display', 'serif'],
         display: ['Playfair Display', 'Bodoni Moda', 'serif'],
         editorial: ['Bodoni Moda', 'Playfair Display', 'serif'],
         accent: ['Italiana', 'Cinzel', 'Playfair Display', 'serif'],
         serif: ['Cormorant Garamond', 'Playfair Display', 'serif'],
         mono: ['JetBrains Mono', 'monospace'],
-        body: ['Plus Jakarta Sans', 'sans-serif'],
+        sans: ['Plus Jakarta Sans', 'sans-serif'],
         syne: ['Syne', 'sans-serif'],
       },
       animation: {

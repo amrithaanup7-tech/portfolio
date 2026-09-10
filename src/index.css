@@ -21,10 +21,12 @@
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
   background-color: var(--color-cream);
   color: var(--color-nearblack);
   cursor: default;
+  font-size: 1.1rem;
+  line-height: 1.65;
 }
 
 /* Halftone Effect Class */
