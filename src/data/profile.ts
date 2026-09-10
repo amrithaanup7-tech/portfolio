@@ -367,9 +367,9 @@ export const PROFILE = {
     {
       id: "lab-001",
       code: "LAB / 001",
-      title: "Mother's Custom Showcase Website",
-      whatITried: "Designed and built a practical personal website for my mother to present her work cleanly.",
-      whatILearned: "Responsive layout design, typography pairing, and building for real non-technical users.",
+      title: "Surprise Website for Mom",
+      whatITried: "Designed and built a custom surprise website for my mother as a heartfelt gift to make her smile.",
+      whatILearned: "How code can create genuine joy, designing warm thoughtful digital experiences for loved ones, and personal web crafting.",
       technology: "HTML, CSS, JavaScript",
       status: "BUILT" as const
     },
@@ -476,12 +476,12 @@ export const PROFILE = {
       snippet: "How starting as an intern right now allows me to learn by doing, test tools, and stay curious without fear."
     },
     {
-      title: "Building for Real People: Creating a Website for My Mother",
-      topic: "Web Design / Practical Work",
+      title: "Building to Make People Smile: A Surprise Website for My Mother",
+      topic: "Creative Web / Personal Projects",
       readTime: "3 min read",
       date: "2026",
       url: "https://medium.com/@amrithaanup7",
-      snippet: "Lessons learned from listening to user requirements and delivering a clean, usable web project for family."
+      snippet: "Lessons learned from using code to create emotional joy, surprising family with custom web design, and making technology feel personal."
     }
   ] as ArticleItem[]
 };
