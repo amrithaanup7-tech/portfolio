@@ -7,7 +7,6 @@ import { FeaturedWork } from './components/FeaturedWork';
 import { LabSection } from './components/LabSection';
 import { SkillsSection } from './components/SkillsSection';
 import { ExperienceJourney } from './components/ExperienceJourney';
-import { WritingSection } from './components/WritingSection';
 import { ContactSection } from './components/ContactSection';
 import { EasterEggs } from './components/EasterEggs';
 import { GwenArcadeGame } from './components/GwenArcadeGame';
@@ -34,7 +33,6 @@ export function App() {
         <LabSection onOpenArcade={() => setIsArcadeOpen(true)} />
         <SkillsSection />
         <ExperienceJourney />
-        <WritingSection />
         <ContactSection />
       </main>
 
