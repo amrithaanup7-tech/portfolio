@@ -177,15 +177,14 @@ export const ContactSection: React.FC = () => {
           <div className="flex items-center gap-4">
             <a
               href={ensureAbsoluteUrl(contact.resumeUrl)}
-              download="amritha-anup-resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => soundFx.playClick()}
               className="flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-blush text-nearblack font-bold hover:scale-105 transition-transform"
-              data-cursor="RESUME ↓"
+              data-cursor="RESUME ↗"
             >
               <Download className="w-4 h-4" />
-              <span>DOWNLOAD RESUME ↓</span>
+              <span>VIEW RESUME ↗</span>
             </a>
           </div>
 

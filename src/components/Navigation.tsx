@@ -118,15 +118,14 @@ export const Navigation: React.FC<NavigationProps> = ({ onOpenArcade }) => {
             {/* Resume Button */}
             <a
               href={PROFILE.contact.resumeUrl}
-              download="amritha-anup-resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => soundFx.playClick()}
               className="flex items-center gap-2 px-5 py-2 rounded-full text-xs sm:text-sm font-mono font-bold bg-cherry text-cream dark:bg-blush dark:text-nearblack hover:opacity-90 hover:scale-105 transition-all shadow-md"
-              data-cursor="RESUME ↓"
+              data-cursor="RESUME ↗"
             >
               <Download className="w-4 h-4" />
-              <span>RESUME ↓</span>
+              <span>RESUME</span>
             </a>
           </div>
 
@@ -211,13 +210,12 @@ export const Navigation: React.FC<NavigationProps> = ({ onOpenArcade }) => {
                 <SoundToggle />
                 <a
                   href={PROFILE.contact.resumeUrl}
-                  download="amritha-anup-resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-mono font-bold bg-blush text-cherry"
                 >
                   <Download className="w-4 h-4" />
-                  <span>RESUME ↓</span>
+                  <span>RESUME</span>
                 </a>
               </div>
               <p className="text-xs font-mono text-blush/70 text-center">
